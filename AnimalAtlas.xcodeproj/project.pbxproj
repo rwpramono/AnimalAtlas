@@ -10,7 +10,6 @@
 		9A0EA5662C5221D9005FB9C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA5652C5221D9005FB9C3 /* AppDelegate.swift */; };
 		9A0EA5682C5221D9005FB9C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA5672C5221D9005FB9C3 /* SceneDelegate.swift */; };
 		9A0EA56A2C5221D9005FB9C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA5692C5221D9005FB9C3 /* ViewController.swift */; };
-		9A0EA56D2C5221D9005FB9C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A0EA56B2C5221D9005FB9C3 /* Main.storyboard */; };
 		9A0EA56F2C5221DA005FB9C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A0EA56E2C5221DA005FB9C3 /* Assets.xcassets */; };
 		9A0EA5722C5221DA005FB9C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A0EA5702C5221DA005FB9C3 /* LaunchScreen.storyboard */; };
 		9A0EA57D2C5221DA005FB9C3 /* AnimalAtlasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA57C2C5221DA005FB9C3 /* AnimalAtlasTests.swift */; };
@@ -40,7 +39,6 @@
 		9A0EA5652C5221D9005FB9C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9A0EA5672C5221D9005FB9C3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		9A0EA5692C5221D9005FB9C3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		9A0EA56C2C5221D9005FB9C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9A0EA56E2C5221DA005FB9C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9A0EA5712C5221DA005FB9C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9A0EA5732C5221DA005FB9C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -99,10 +97,10 @@
 		9A0EA5642C5221D9005FB9C3 /* AnimalAtlas */ = {
 			isa = PBXGroup;
 			children = (
+				9A0EA5952C5222FE005FB9C3 /* AnimalList */,
 				9A0EA5652C5221D9005FB9C3 /* AppDelegate.swift */,
 				9A0EA5672C5221D9005FB9C3 /* SceneDelegate.swift */,
 				9A0EA5692C5221D9005FB9C3 /* ViewController.swift */,
-				9A0EA56B2C5221D9005FB9C3 /* Main.storyboard */,
 				9A0EA56E2C5221DA005FB9C3 /* Assets.xcassets */,
 				9A0EA5702C5221DA005FB9C3 /* LaunchScreen.storyboard */,
 				9A0EA5732C5221DA005FB9C3 /* Info.plist */,
@@ -125,6 +123,13 @@
 				9A0EA5882C5221DA005FB9C3 /* AnimalAtlasUITestsLaunchTests.swift */,
 			);
 			path = AnimalAtlasUITests;
+			sourceTree = "<group>";
+		};
+		9A0EA5952C5222FE005FB9C3 /* AnimalList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AnimalList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +238,6 @@
 			files = (
 				9A0EA5722C5221DA005FB9C3 /* LaunchScreen.storyboard in Resources */,
 				9A0EA56F2C5221DA005FB9C3 /* Assets.xcassets in Resources */,
-				9A0EA56D2C5221D9005FB9C3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +301,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		9A0EA56B2C5221D9005FB9C3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9A0EA56C2C5221D9005FB9C3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		9A0EA5702C5221DA005FB9C3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -447,9 +443,9 @@
 				INFOPLIST_FILE = AnimalAtlas/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -457,9 +453,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = id.biz.pramida.AnimalAtlas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -475,9 +475,9 @@
 				INFOPLIST_FILE = AnimalAtlas/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -485,9 +485,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = id.biz.pramida.AnimalAtlas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
