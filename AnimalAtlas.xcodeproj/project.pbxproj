@@ -20,6 +20,9 @@
 		9A0EA5A32C522759005FB9C3 /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA5A22C522759005FB9C3 /* HttpMethod.swift */; };
 		9A0EA5A62C5227A6005FB9C3 /* HttpNetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA5A52C5227A6005FB9C3 /* HttpNetworkError.swift */; };
 		9A0EA5A92C5227ED005FB9C3 /* URLSessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA5A82C5227ED005FB9C3 /* URLSessionService.swift */; };
+		9A0EA5AD2C522A3A005FB9C3 /* NinjaAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA5AC2C522A3A005FB9C3 /* NinjaAPI.swift */; };
+		9A0EA5AF2C522B4D005FB9C3 /* AnimalsAPICollections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA5AE2C522B4D005FB9C3 /* AnimalsAPICollections.swift */; };
+		9A0EA5B12C522DFF005FB9C3 /* AnimalResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA5B02C522DFF005FB9C3 /* AnimalResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,9 @@
 		9A0EA5A22C522759005FB9C3 /* HttpMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
 		9A0EA5A52C5227A6005FB9C3 /* HttpNetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpNetworkError.swift; sourceTree = "<group>"; };
 		9A0EA5A82C5227ED005FB9C3 /* URLSessionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionService.swift; sourceTree = "<group>"; };
+		9A0EA5AC2C522A3A005FB9C3 /* NinjaAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NinjaAPI.swift; sourceTree = "<group>"; };
+		9A0EA5AE2C522B4D005FB9C3 /* AnimalsAPICollections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsAPICollections.swift; sourceTree = "<group>"; };
+		9A0EA5B02C522DFF005FB9C3 /* AnimalResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +162,7 @@
 		9A0EA5992C5223A8005FB9C3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				9A0EA5B02C522DFF005FB9C3 /* AnimalResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -178,6 +185,7 @@
 		9A0EA59E2C52253C005FB9C3 /* NetworkService */ = {
 			isa = PBXGroup;
 			children = (
+				9A0EA5AA2C5228C0005FB9C3 /* APICollections */,
 				9A0EA5A72C5227E3005FB9C3 /* URLSessionService */,
 				9A0EA5A42C522791005FB9C3 /* Config */,
 			);
@@ -201,6 +209,23 @@
 				9A0EA5A82C5227ED005FB9C3 /* URLSessionService.swift */,
 			);
 			path = URLSessionService;
+			sourceTree = "<group>";
+		};
+		9A0EA5AA2C5228C0005FB9C3 /* APICollections */ = {
+			isa = PBXGroup;
+			children = (
+				9A0EA5AE2C522B4D005FB9C3 /* AnimalsAPICollections.swift */,
+				9A0EA5AB2C522A18005FB9C3 /* NinjaAPI */,
+			);
+			path = APICollections;
+			sourceTree = "<group>";
+		};
+		9A0EA5AB2C522A18005FB9C3 /* NinjaAPI */ = {
+			isa = PBXGroup;
+			children = (
+				9A0EA5AC2C522A3A005FB9C3 /* NinjaAPI.swift */,
+			);
+			path = NinjaAPI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,10 +359,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A0EA56A2C5221D9005FB9C3 /* AnimalListVC.swift in Sources */,
+				9A0EA5AD2C522A3A005FB9C3 /* NinjaAPI.swift in Sources */,
 				9A0EA5A62C5227A6005FB9C3 /* HttpNetworkError.swift in Sources */,
 				9A0EA5A92C5227ED005FB9C3 /* URLSessionService.swift in Sources */,
 				9A0EA5662C5221D9005FB9C3 /* AppDelegate.swift in Sources */,
 				9A0EA59D2C522537005FB9C3 /* HttpNetwork.swift in Sources */,
+				9A0EA5AF2C522B4D005FB9C3 /* AnimalsAPICollections.swift in Sources */,
+				9A0EA5B12C522DFF005FB9C3 /* AnimalResponse.swift in Sources */,
 				9A0EA5A02C52255D005FB9C3 /* APIDataRequest.swift in Sources */,
 				9A0EA5A32C522759005FB9C3 /* HttpMethod.swift in Sources */,
 				9A0EA5682C5221D9005FB9C3 /* SceneDelegate.swift in Sources */,
