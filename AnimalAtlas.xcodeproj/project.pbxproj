@@ -9,12 +9,17 @@
 /* Begin PBXBuildFile section */
 		9A0EA5662C5221D9005FB9C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA5652C5221D9005FB9C3 /* AppDelegate.swift */; };
 		9A0EA5682C5221D9005FB9C3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA5672C5221D9005FB9C3 /* SceneDelegate.swift */; };
-		9A0EA56A2C5221D9005FB9C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA5692C5221D9005FB9C3 /* ViewController.swift */; };
+		9A0EA56A2C5221D9005FB9C3 /* AnimalListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA5692C5221D9005FB9C3 /* AnimalListVC.swift */; };
 		9A0EA56F2C5221DA005FB9C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A0EA56E2C5221DA005FB9C3 /* Assets.xcassets */; };
 		9A0EA5722C5221DA005FB9C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A0EA5702C5221DA005FB9C3 /* LaunchScreen.storyboard */; };
 		9A0EA57D2C5221DA005FB9C3 /* AnimalAtlasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA57C2C5221DA005FB9C3 /* AnimalAtlasTests.swift */; };
 		9A0EA5872C5221DA005FB9C3 /* AnimalAtlasUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA5862C5221DA005FB9C3 /* AnimalAtlasUITests.swift */; };
 		9A0EA5892C5221DA005FB9C3 /* AnimalAtlasUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA5882C5221DA005FB9C3 /* AnimalAtlasUITestsLaunchTests.swift */; };
+		9A0EA59D2C522537005FB9C3 /* HttpNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA59C2C522537005FB9C3 /* HttpNetwork.swift */; };
+		9A0EA5A02C52255D005FB9C3 /* APIDataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA59F2C52255D005FB9C3 /* APIDataRequest.swift */; };
+		9A0EA5A32C522759005FB9C3 /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA5A22C522759005FB9C3 /* HttpMethod.swift */; };
+		9A0EA5A62C5227A6005FB9C3 /* HttpNetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA5A52C5227A6005FB9C3 /* HttpNetworkError.swift */; };
+		9A0EA5A92C5227ED005FB9C3 /* URLSessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA5A82C5227ED005FB9C3 /* URLSessionService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +43,7 @@
 		9A0EA5622C5221D9005FB9C3 /* AnimalAtlas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimalAtlas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A0EA5652C5221D9005FB9C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9A0EA5672C5221D9005FB9C3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9A0EA5692C5221D9005FB9C3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9A0EA5692C5221D9005FB9C3 /* AnimalListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalListVC.swift; sourceTree = "<group>"; };
 		9A0EA56E2C5221DA005FB9C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9A0EA5712C5221DA005FB9C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9A0EA5732C5221DA005FB9C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +52,11 @@
 		9A0EA5822C5221DA005FB9C3 /* AnimalAtlasUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnimalAtlasUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A0EA5862C5221DA005FB9C3 /* AnimalAtlasUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalAtlasUITests.swift; sourceTree = "<group>"; };
 		9A0EA5882C5221DA005FB9C3 /* AnimalAtlasUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalAtlasUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9A0EA59C2C522537005FB9C3 /* HttpNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpNetwork.swift; sourceTree = "<group>"; };
+		9A0EA59F2C52255D005FB9C3 /* APIDataRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIDataRequest.swift; sourceTree = "<group>"; };
+		9A0EA5A22C522759005FB9C3 /* HttpMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
+		9A0EA5A52C5227A6005FB9C3 /* HttpNetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpNetworkError.swift; sourceTree = "<group>"; };
+		9A0EA5A82C5227ED005FB9C3 /* URLSessionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,13 +107,15 @@
 		9A0EA5642C5221D9005FB9C3 /* AnimalAtlas */ = {
 			isa = PBXGroup;
 			children = (
-				9A0EA5952C5222FE005FB9C3 /* AnimalList */,
+				9A0EA5732C5221DA005FB9C3 /* Info.plist */,
 				9A0EA5652C5221D9005FB9C3 /* AppDelegate.swift */,
 				9A0EA5672C5221D9005FB9C3 /* SceneDelegate.swift */,
-				9A0EA5692C5221D9005FB9C3 /* ViewController.swift */,
 				9A0EA56E2C5221DA005FB9C3 /* Assets.xcassets */,
+				9A0EA5982C522395005FB9C3 /* Features */,
 				9A0EA5702C5221DA005FB9C3 /* LaunchScreen.storyboard */,
-				9A0EA5732C5221DA005FB9C3 /* Info.plist */,
+				9A0EA5992C5223A8005FB9C3 /* Models */,
+				9A0EA59A2C5223AE005FB9C3 /* Resources */,
+				9A0EA59B2C5223B5005FB9C3 /* Services */,
 			);
 			path = AnimalAtlas;
 			sourceTree = "<group>";
@@ -128,8 +140,67 @@
 		9A0EA5952C5222FE005FB9C3 /* AnimalList */ = {
 			isa = PBXGroup;
 			children = (
+				9A0EA5692C5221D9005FB9C3 /* AnimalListVC.swift */,
 			);
 			path = AnimalList;
+			sourceTree = "<group>";
+		};
+		9A0EA5982C522395005FB9C3 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				9A0EA5952C5222FE005FB9C3 /* AnimalList */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		9A0EA5992C5223A8005FB9C3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9A0EA59A2C5223AE005FB9C3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9A0EA59B2C5223B5005FB9C3 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9A0EA59E2C52253C005FB9C3 /* NetworkService */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		9A0EA59E2C52253C005FB9C3 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				9A0EA5A72C5227E3005FB9C3 /* URLSessionService */,
+				9A0EA5A42C522791005FB9C3 /* Config */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		9A0EA5A42C522791005FB9C3 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				9A0EA59F2C52255D005FB9C3 /* APIDataRequest.swift */,
+				9A0EA5A22C522759005FB9C3 /* HttpMethod.swift */,
+				9A0EA59C2C522537005FB9C3 /* HttpNetwork.swift */,
+				9A0EA5A52C5227A6005FB9C3 /* HttpNetworkError.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		9A0EA5A72C5227E3005FB9C3 /* URLSessionService */ = {
+			isa = PBXGroup;
+			children = (
+				9A0EA5A82C5227ED005FB9C3 /* URLSessionService.swift */,
+			);
+			path = URLSessionService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,8 +333,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A0EA56A2C5221D9005FB9C3 /* ViewController.swift in Sources */,
+				9A0EA56A2C5221D9005FB9C3 /* AnimalListVC.swift in Sources */,
+				9A0EA5A62C5227A6005FB9C3 /* HttpNetworkError.swift in Sources */,
+				9A0EA5A92C5227ED005FB9C3 /* URLSessionService.swift in Sources */,
 				9A0EA5662C5221D9005FB9C3 /* AppDelegate.swift in Sources */,
+				9A0EA59D2C522537005FB9C3 /* HttpNetwork.swift in Sources */,
+				9A0EA5A02C52255D005FB9C3 /* APIDataRequest.swift in Sources */,
+				9A0EA5A32C522759005FB9C3 /* HttpMethod.swift in Sources */,
 				9A0EA5682C5221D9005FB9C3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
