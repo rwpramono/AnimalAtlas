@@ -15,4 +15,5 @@ final class DependencyContainer {
     private let urlSession = URLSession(configuration: .ephemeral)
 
     lazy var networkService: HttpNetwork = URLSessionService(session: urlSession, decoder: jsonDecoder)
+    lazy var dataPersist: DataPersistence = CoreDataService(containerName: "AnimalAtlas")
 }
