@@ -30,7 +30,7 @@ final class AnimalListVC: UIViewController {
 
     override func viewDidLoad() {
         let favoriteButton = UIBarButtonItem(
-            image: UIImage(systemName: "love"),
+            image: UIImage(systemName: "heart.circle")?.withTintColor(.systemPink, renderingMode: .alwaysOriginal),
             style: .plain,
             target: self,
             action: #selector(favoriteButtonTapped)
@@ -42,7 +42,7 @@ final class AnimalListVC: UIViewController {
         configureDataSource()
         configureDataBinding()
         
-        viewModel.getAllPostsData()
+//        viewModel.getAllPostsData()
     }
     
     private func configureDataSource() {

@@ -30,6 +30,7 @@
 		9A0EA5BC2C5290FF005FB9C3 /* AnimalListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA5BB2C5290FF005FB9C3 /* AnimalListVM.swift */; };
 		9A0EA5BF2C52912F005FB9C3 /* AnimalListContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA5BE2C52912F005FB9C3 /* AnimalListContentView.swift */; };
 		9A0EA5C12C529140005FB9C3 /* AnimalItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA5C02C529140005FB9C3 /* AnimalItemViewCell.swift */; };
+		9A0EA5C32C533433005FB9C3 /* AnimalPhotoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA5C22C533433005FB9C3 /* AnimalPhotoViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		9A0EA5BB2C5290FF005FB9C3 /* AnimalListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalListVM.swift; sourceTree = "<group>"; };
 		9A0EA5BE2C52912F005FB9C3 /* AnimalListContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalListContentView.swift; sourceTree = "<group>"; };
 		9A0EA5C02C529140005FB9C3 /* AnimalItemViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalItemViewCell.swift; sourceTree = "<group>"; };
+		9A0EA5C22C533433005FB9C3 /* AnimalPhotoViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalPhotoViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +174,7 @@
 		9A0EA5982C522395005FB9C3 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				9A0EA5C42C54F391005FB9C3 /* AnimalGroup */,
 				9A0EA5952C5222FE005FB9C3 /* AnimalList */,
 			);
 			path = Features;
@@ -253,6 +256,22 @@
 			children = (
 				9A0EA5C02C529140005FB9C3 /* AnimalItemViewCell.swift */,
 				9A0EA5BE2C52912F005FB9C3 /* AnimalListContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9A0EA5C42C54F391005FB9C3 /* AnimalGroup */ = {
+			isa = PBXGroup;
+			children = (
+				9A0EA5C52C54F39F005FB9C3 /* View */,
+			);
+			path = AnimalGroup;
+			sourceTree = "<group>";
+		};
+		9A0EA5C52C54F39F005FB9C3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9A0EA5C22C533433005FB9C3 /* AnimalPhotoViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -397,6 +416,7 @@
 				9A0EA5662C5221D9005FB9C3 /* AppDelegate.swift in Sources */,
 				9A0EA59D2C522537005FB9C3 /* HttpNetwork.swift in Sources */,
 				9A0EA5BF2C52912F005FB9C3 /* AnimalListContentView.swift in Sources */,
+				9A0EA5C32C533433005FB9C3 /* AnimalPhotoViewCell.swift in Sources */,
 				9A0EA5AF2C522B4D005FB9C3 /* AnimalsAPICollections.swift in Sources */,
 				9A0EA5B12C522DFF005FB9C3 /* AnimalResponse.swift in Sources */,
 				9A0EA5A02C52255D005FB9C3 /* APIDataRequest.swift in Sources */,

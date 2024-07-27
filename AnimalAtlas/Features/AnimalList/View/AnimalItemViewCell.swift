@@ -9,66 +9,45 @@ import Combine
 import Foundation
 import UIKit
 
-final class AnimalItemViewCell: UITableViewCell {
-    private var data: AnimalResponseElement?
+final class AnimalItemViewCell: UICollectionViewCell {
+    static let identifier = "AnimalItemViewCell"
+
+    private var data: AnimalResponse?
     
     let cellTapPublishers = PassthroughSubject<AnimalResponseElement, Never>()
-    let likeTapPublishers = PassthroughSubject<String, Never>()
 
-    let contentContainer: UIView = {
-        let view = UIView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .white
-        view.layer.cornerRadius = 8
-        view.layer.shadowColor = UIColor.black.cgColor
-        view.layer.shadowOffset = CGSize(width: 0, height: 2)
-        view.layer.shadowOpacity = 0.4
-        view.layer.shadowRadius = 4
-        return view
+    private let titleLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 16, weight: .bold)
+        return label
     }()
     
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        setupContentContainer()
+    private let imageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFit
+        imageView.clipsToBounds = true
+        return imageView
+    }()
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        contentView.addSubview(imageView)
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+            imageView.topAnchor.constraint(equalTo: contentView.topAnchor),
+            imageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            imageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            imageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
+        ])
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        contentContainer.layer.shadowPath = UIBezierPath(
-            roundedRect: contentContainer.bounds,
-            cornerRadius: contentContainer.layer.cornerRadius
-        ).cgPath
-    }
-    
-    private func setupContentContainer() {
-        contentView.addSubview(contentContainer)
-        
-        NSLayoutConstraint.activate([
-            contentContainer.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
-            contentContainer.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8),
-            contentContainer.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8),
-            contentContainer.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8),
-        ])
-        
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(cellTapped))
-        contentView.addGestureRecognizer(tapGesture)
-    }
-    
-    @objc private func likeLabelTapped() {
-        guard let data else { return }
-        likeTapPublishers.send(data.name)
-    }
 
-    @objc private func cellTapped() {
-        guard let data else { return }
-        cellTapPublishers.send(data)
-    }
-
-    func configure(with data: AnimalResponseElement) {
-        self.data = data
+    func configure(with imageName: String) {
+        imageView.image = UIImage(named: imageName)
     }
 }
+
