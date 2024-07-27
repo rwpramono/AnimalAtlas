@@ -31,6 +31,21 @@
 		9A0EA5BF2C52912F005FB9C3 /* AnimalListContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA5BE2C52912F005FB9C3 /* AnimalListContentView.swift */; };
 		9A0EA5C12C529140005FB9C3 /* AnimalItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA5C02C529140005FB9C3 /* AnimalItemViewCell.swift */; };
 		9A0EA5C32C533433005FB9C3 /* AnimalPhotoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA5C22C533433005FB9C3 /* AnimalPhotoViewCell.swift */; };
+		9A0EA5C92C54F63F005FB9C3 /* DataPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA5C82C54F63F005FB9C3 /* DataPersistence.swift */; };
+		9A0EA5CC2C54F68A005FB9C3 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA5CB2C54F68A005FB9C3 /* CoreDataService.swift */; };
+		9A0EA5CE2C54F6CE005FB9C3 /* CoreDataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA5CD2C54F6CE005FB9C3 /* CoreDataError.swift */; };
+		9A0EA5D12C54F70F005FB9C3 /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA5CF2C54F70F005FB9C3 /* CoreDataModel.xcdatamodeld */; };
+		9A0EA5D42C552C71005FB9C3 /* AnimalListEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA5D32C552C71005FB9C3 /* AnimalListEntity.swift */; };
+		9A0EA5D62C552C83005FB9C3 /* FavoriteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA5D52C552C83005FB9C3 /* FavoriteEntity.swift */; };
+		9A0EA5D82C55456A005FB9C3 /* CodingUserInfoKey+NSManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA5D72C55456A005FB9C3 /* CodingUserInfoKey+NSManagedObject.swift */; };
+		9A0EA5DB2C554C32005FB9C3 /* FavoriteAnimalFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA5DA2C554C32005FB9C3 /* FavoriteAnimalFactory.swift */; };
+		9A0EA5DD2C554C3D005FB9C3 /* AnimalGroupFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA5DC2C554C3D005FB9C3 /* AnimalGroupFactory.swift */; };
+		9A0EA5DF2C554C58005FB9C3 /* FavoriteAnimalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA5DE2C554C58005FB9C3 /* FavoriteAnimalVC.swift */; };
+		9A0EA5E12C554C5F005FB9C3 /* FavoriteAnimalVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA5E02C554C5F005FB9C3 /* FavoriteAnimalVM.swift */; };
+		9A0EA5E32C554CCE005FB9C3 /* FavoriteAnimalContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA5E22C554CCE005FB9C3 /* FavoriteAnimalContentView.swift */; };
+		9A0EA6B42C5560BA005FB9C3 /* AnimalGroupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA6B32C5560BA005FB9C3 /* AnimalGroupVC.swift */; };
+		9A0EA6B62C5560C2005FB9C3 /* AnimalGroupVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA6B52C5560C2005FB9C3 /* AnimalGroupVM.swift */; };
+		9A0EA6B82C55611B005FB9C3 /* AnimalGroupContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA6B72C55611B005FB9C3 /* AnimalGroupContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +94,21 @@
 		9A0EA5BE2C52912F005FB9C3 /* AnimalListContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalListContentView.swift; sourceTree = "<group>"; };
 		9A0EA5C02C529140005FB9C3 /* AnimalItemViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalItemViewCell.swift; sourceTree = "<group>"; };
 		9A0EA5C22C533433005FB9C3 /* AnimalPhotoViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalPhotoViewCell.swift; sourceTree = "<group>"; };
+		9A0EA5C82C54F63F005FB9C3 /* DataPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPersistence.swift; sourceTree = "<group>"; };
+		9A0EA5CB2C54F68A005FB9C3 /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
+		9A0EA5CD2C54F6CE005FB9C3 /* CoreDataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataError.swift; sourceTree = "<group>"; };
+		9A0EA5D02C54F70F005FB9C3 /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
+		9A0EA5D32C552C71005FB9C3 /* AnimalListEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalListEntity.swift; sourceTree = "<group>"; };
+		9A0EA5D52C552C83005FB9C3 /* FavoriteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteEntity.swift; sourceTree = "<group>"; };
+		9A0EA5D72C55456A005FB9C3 /* CodingUserInfoKey+NSManagedObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CodingUserInfoKey+NSManagedObject.swift"; sourceTree = "<group>"; };
+		9A0EA5DA2C554C32005FB9C3 /* FavoriteAnimalFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteAnimalFactory.swift; sourceTree = "<group>"; };
+		9A0EA5DC2C554C3D005FB9C3 /* AnimalGroupFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalGroupFactory.swift; sourceTree = "<group>"; };
+		9A0EA5DE2C554C58005FB9C3 /* FavoriteAnimalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteAnimalVC.swift; sourceTree = "<group>"; };
+		9A0EA5E02C554C5F005FB9C3 /* FavoriteAnimalVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteAnimalVM.swift; sourceTree = "<group>"; };
+		9A0EA5E22C554CCE005FB9C3 /* FavoriteAnimalContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteAnimalContentView.swift; sourceTree = "<group>"; };
+		9A0EA6B32C5560BA005FB9C3 /* AnimalGroupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalGroupVC.swift; sourceTree = "<group>"; };
+		9A0EA6B52C5560C2005FB9C3 /* AnimalGroupVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalGroupVM.swift; sourceTree = "<group>"; };
+		9A0EA6B72C55611B005FB9C3 /* AnimalGroupContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalGroupContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,12 +159,9 @@
 		9A0EA5642C5221D9005FB9C3 /* AnimalAtlas */ = {
 			isa = PBXGroup;
 			children = (
-				9A0EA5732C5221DA005FB9C3 /* Info.plist */,
 				9A0EA5652C5221D9005FB9C3 /* AppDelegate.swift */,
 				9A0EA5672C5221D9005FB9C3 /* SceneDelegate.swift */,
-				9A0EA56E2C5221DA005FB9C3 /* Assets.xcassets */,
 				9A0EA5982C522395005FB9C3 /* Features */,
-				9A0EA5702C5221DA005FB9C3 /* LaunchScreen.storyboard */,
 				9A0EA5992C5223A8005FB9C3 /* Models */,
 				9A0EA59A2C5223AE005FB9C3 /* Resources */,
 				9A0EA59B2C5223B5005FB9C3 /* Services */,
@@ -174,6 +201,7 @@
 		9A0EA5982C522395005FB9C3 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				9A0EA5D92C554C20005FB9C3 /* FavoriteAnimal */,
 				9A0EA5C42C54F391005FB9C3 /* AnimalGroup */,
 				9A0EA5952C5222FE005FB9C3 /* AnimalList */,
 			);
@@ -185,6 +213,8 @@
 			children = (
 				9A0EA5B02C522DFF005FB9C3 /* AnimalResponse.swift */,
 				9A0EA5B72C528FAE005FB9C3 /* SearchPhotoResponse.swift */,
+				9A0EA5D32C552C71005FB9C3 /* AnimalListEntity.swift */,
+				9A0EA5D52C552C83005FB9C3 /* FavoriteEntity.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -192,6 +222,9 @@
 		9A0EA59A2C5223AE005FB9C3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9A0EA5732C5221DA005FB9C3 /* Info.plist */,
+				9A0EA56E2C5221DA005FB9C3 /* Assets.xcassets */,
+				9A0EA5702C5221DA005FB9C3 /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -199,6 +232,7 @@
 		9A0EA59B2C5223B5005FB9C3 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				9A0EA5C62C54F601005FB9C3 /* PersistenceService */,
 				9A0EA59E2C52253C005FB9C3 /* NetworkService */,
 			);
 			path = Services;
@@ -247,6 +281,7 @@
 			isa = PBXGroup;
 			children = (
 				9A0EA5B32C528C46005FB9C3 /* DependencyContainer.swift */,
+				9A0EA5D72C55456A005FB9C3 /* CodingUserInfoKey+NSManagedObject.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -263,6 +298,9 @@
 		9A0EA5C42C54F391005FB9C3 /* AnimalGroup */ = {
 			isa = PBXGroup;
 			children = (
+				9A0EA5DC2C554C3D005FB9C3 /* AnimalGroupFactory.swift */,
+				9A0EA6B32C5560BA005FB9C3 /* AnimalGroupVC.swift */,
+				9A0EA6B52C5560C2005FB9C3 /* AnimalGroupVM.swift */,
 				9A0EA5C52C54F39F005FB9C3 /* View */,
 			);
 			path = AnimalGroup;
@@ -272,6 +310,53 @@
 			isa = PBXGroup;
 			children = (
 				9A0EA5C22C533433005FB9C3 /* AnimalPhotoViewCell.swift */,
+				9A0EA6B72C55611B005FB9C3 /* AnimalGroupContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9A0EA5C62C54F601005FB9C3 /* PersistenceService */ = {
+			isa = PBXGroup;
+			children = (
+				9A0EA5CA2C54F677005FB9C3 /* CoreDataService */,
+				9A0EA5C72C54F62D005FB9C3 /* Config */,
+			);
+			path = PersistenceService;
+			sourceTree = "<group>";
+		};
+		9A0EA5C72C54F62D005FB9C3 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				9A0EA5C82C54F63F005FB9C3 /* DataPersistence.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		9A0EA5CA2C54F677005FB9C3 /* CoreDataService */ = {
+			isa = PBXGroup;
+			children = (
+				9A0EA5CB2C54F68A005FB9C3 /* CoreDataService.swift */,
+				9A0EA5CD2C54F6CE005FB9C3 /* CoreDataError.swift */,
+				9A0EA5CF2C54F70F005FB9C3 /* CoreDataModel.xcdatamodeld */,
+			);
+			path = CoreDataService;
+			sourceTree = "<group>";
+		};
+		9A0EA5D92C554C20005FB9C3 /* FavoriteAnimal */ = {
+			isa = PBXGroup;
+			children = (
+				9A0EA5DA2C554C32005FB9C3 /* FavoriteAnimalFactory.swift */,
+				9A0EA5DE2C554C58005FB9C3 /* FavoriteAnimalVC.swift */,
+				9A0EA5E02C554C5F005FB9C3 /* FavoriteAnimalVM.swift */,
+				9A0EA5E42C554CD2005FB9C3 /* View */,
+			);
+			path = FavoriteAnimal;
+			sourceTree = "<group>";
+		};
+		9A0EA5E42C554CD2005FB9C3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9A0EA5E22C554CCE005FB9C3 /* FavoriteAnimalContentView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -408,23 +493,38 @@
 			files = (
 				9A0EA56A2C5221D9005FB9C3 /* AnimalListVC.swift in Sources */,
 				9A0EA5C12C529140005FB9C3 /* AnimalItemViewCell.swift in Sources */,
+				9A0EA5DD2C554C3D005FB9C3 /* AnimalGroupFactory.swift in Sources */,
 				9A0EA5BA2C5290F1005FB9C3 /* AnimalListFactory.swift in Sources */,
+				9A0EA5C92C54F63F005FB9C3 /* DataPersistence.swift in Sources */,
 				9A0EA5AD2C522A3A005FB9C3 /* NinjaAPI.swift in Sources */,
+				9A0EA6B42C5560BA005FB9C3 /* AnimalGroupVC.swift in Sources */,
 				9A0EA5A62C5227A6005FB9C3 /* HttpNetworkError.swift in Sources */,
+				9A0EA5DF2C554C58005FB9C3 /* FavoriteAnimalVC.swift in Sources */,
+				9A0EA5E12C554C5F005FB9C3 /* FavoriteAnimalVM.swift in Sources */,
 				9A0EA5A92C5227ED005FB9C3 /* URLSessionService.swift in Sources */,
+				9A0EA5CC2C54F68A005FB9C3 /* CoreDataService.swift in Sources */,
 				9A0EA5B62C528E37005FB9C3 /* PaxelAPI.swift in Sources */,
 				9A0EA5662C5221D9005FB9C3 /* AppDelegate.swift in Sources */,
 				9A0EA59D2C522537005FB9C3 /* HttpNetwork.swift in Sources */,
 				9A0EA5BF2C52912F005FB9C3 /* AnimalListContentView.swift in Sources */,
 				9A0EA5C32C533433005FB9C3 /* AnimalPhotoViewCell.swift in Sources */,
 				9A0EA5AF2C522B4D005FB9C3 /* AnimalsAPICollections.swift in Sources */,
+				9A0EA6B62C5560C2005FB9C3 /* AnimalGroupVM.swift in Sources */,
 				9A0EA5B12C522DFF005FB9C3 /* AnimalResponse.swift in Sources */,
 				9A0EA5A02C52255D005FB9C3 /* APIDataRequest.swift in Sources */,
 				9A0EA5A32C522759005FB9C3 /* HttpMethod.swift in Sources */,
+				9A0EA5D12C54F70F005FB9C3 /* CoreDataModel.xcdatamodeld in Sources */,
+				9A0EA5E32C554CCE005FB9C3 /* FavoriteAnimalContentView.swift in Sources */,
 				9A0EA5B42C528C46005FB9C3 /* DependencyContainer.swift in Sources */,
 				9A0EA5682C5221D9005FB9C3 /* SceneDelegate.swift in Sources */,
+				9A0EA5D82C55456A005FB9C3 /* CodingUserInfoKey+NSManagedObject.swift in Sources */,
+				9A0EA5D42C552C71005FB9C3 /* AnimalListEntity.swift in Sources */,
+				9A0EA6B82C55611B005FB9C3 /* AnimalGroupContentView.swift in Sources */,
+				9A0EA5CE2C54F6CE005FB9C3 /* CoreDataError.swift in Sources */,
+				9A0EA5DB2C554C32005FB9C3 /* FavoriteAnimalFactory.swift in Sources */,
 				9A0EA5BC2C5290FF005FB9C3 /* AnimalListVM.swift in Sources */,
 				9A0EA5B82C528FAE005FB9C3 /* SearchPhotoResponse.swift in Sources */,
+				9A0EA5D62C552C83005FB9C3 /* FavoriteEntity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,7 +624,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -581,7 +681,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -600,7 +700,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6P6327CH8U;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AnimalAtlas/Info.plist;
+				INFOPLIST_FILE = AnimalAtlas/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -632,7 +732,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6P6327CH8U;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AnimalAtlas/Info.plist;
+				INFOPLIST_FILE = AnimalAtlas/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -771,6 +871,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		9A0EA5CF2C54F70F005FB9C3 /* CoreDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9A0EA5D02C54F70F005FB9C3 /* CoreDataModel.xcdatamodel */,
+			);
+			currentVersion = 9A0EA5D02C54F70F005FB9C3 /* CoreDataModel.xcdatamodel */;
+			path = CoreDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 9A0EA55A2C5221D9005FB9C3 /* Project object */;
 }
