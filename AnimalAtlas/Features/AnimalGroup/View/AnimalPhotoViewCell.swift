@@ -57,7 +57,8 @@ class AnimalPhotoViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func configure(with item: AnimalPhoto) {
+    func configure(with item: AnimalPhoto?) {
+        guard let item else { return }
         animalPhoto.image = UIImage(named: item.url)
     }
     
