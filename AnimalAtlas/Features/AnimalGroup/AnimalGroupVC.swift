@@ -34,6 +34,8 @@ final class AnimalGroupVC: UIViewController {
 
         configureDataSource()
         configureDataBinding()
+        
+        viewModel.getAllAnimalGroup()
     }
     
     private func configureDataSource() {
@@ -41,14 +43,14 @@ final class AnimalGroupVC: UIViewController {
     }
     
     private func configureDataBinding() {
-//        viewModel.$data
-//            .compactMap { $0 }
-//            .first(where: { !$0.isEmpty })
-//            .receive(on: DispatchQueue.main)
-//            .sink { [weak self] _ in
-//                self?.contentView.tableView.reloadData()
-//            }
-//            .store(in: &cancellables)
+        viewModel.$data
+            .compactMap { $0 }
+            .first(where: { !$0.isEmpty })
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] _ in
+//                self?.contentView.collectionView.reloadData()
+            }
+            .store(in: &cancellables)
 //
 //        viewModel.$errorMessage
 //            .dropFirst()
