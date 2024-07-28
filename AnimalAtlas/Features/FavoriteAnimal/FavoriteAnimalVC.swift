@@ -34,6 +34,8 @@ final class FavoriteAnimalVC: UIViewController {
 
         configureDataSource()
         configureDataBinding()
+        
+        viewModel.getFavoritePhoto()
     }
     
     private func configureDataSource() {
@@ -41,14 +43,13 @@ final class FavoriteAnimalVC: UIViewController {
     }
     
     private func configureDataBinding() {
-//        viewModel.$data
-//            .compactMap { $0 }
-//            .first(where: { !$0.isEmpty })
-//            .receive(on: DispatchQueue.main)
-//            .sink { [weak self] _ in
-//                self?.contentView.tableView.reloadData()
-//            }
-//            .store(in: &cancellables)
+        viewModel.$favoriteData
+            .compactMap { $0 }
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] data in
+                self?.contentView.configure(images: data)
+            }
+            .store(in: &cancellables)
 //
 //        viewModel.$errorMessage
 //            .dropFirst()

@@ -8,19 +8,22 @@
 import Combine
 import Foundation
 
-final class AnimalGroupVM: ObservableObject {
+final class AnimalGroupVM<T: DataPersistence>: ObservableObject where T.T == FavoriteAnimalPhoto {
     private let animalNames: AnimalGroup
     private let networkService: HttpNetwork
-    
+    private let dataPersistence: T
+
     private var cancellables = Set<AnyCancellable>()
 
     @Published var errorMessage: String = ""
     @Published var data: [AnimalGroupPhoto]? = []
 
     init(animalNames: AnimalGroup,
-         networkService: HttpNetwork) {
+         networkService: HttpNetwork,
+         dataPersistence: T) {
         self.animalNames = animalNames
         self.networkService = networkService
+        self.dataPersistence = dataPersistence
     }
 
     func getAnimalGroupTitle() -> String {
@@ -49,5 +52,14 @@ final class AnimalGroupVM: ObservableObject {
                     self?.getAllAnimalPhoto()
                 }
             ).store(in: &cancellables)
+    }
+    
+    func saveFavoritePhoto(_ photo: FavoriteAnimalPhoto) {
+        do {
+            try dataPersistence.add(photo)
+        }
+        catch {
+            errorMessage = DataPersistenceError.saveFailed(error).localizedDescription
+        }
     }
 }

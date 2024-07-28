@@ -5,12 +5,14 @@
 //  Created by Rachmat Wahyu Pramono on 28/07/24.
 //
 
+import Combine
 import Foundation
 import UIKit
 
 final class AnimalGroupContentView: UIView {
     private var animalPhoto: [AnimalGroupPhoto]?
-    private var onTapLoveIcon: ((Int?) -> Void)?
+
+    var loveTapPublishers = PassthroughSubject<FavoriteAnimalPhoto, Never>()
 
     private let activityIndicator: UIActivityIndicatorView = {
         let activityIndicator = UIActivityIndicatorView(style: .large)
@@ -86,8 +88,9 @@ extension AnimalGroupContentView: UITableViewDataSource, UITableViewDelegate {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: AnimalPhotoTableViewCell.reuseIdentifier, for: indexPath) as? AnimalPhotoTableViewCell else {
             return UITableViewCell()
         }
-        let sectionData = animalPhoto?[indexPath.section].animalPhotos
-        cell.configure(with: sectionData ?? [])
+        let sectionData = animalPhoto?[indexPath.section]
+        cell.configure(with: sectionData)
+        cell.loveTapPublishers = loveTapPublishers
         return cell
     }
 

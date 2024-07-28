@@ -29,7 +29,12 @@ class FavoriteAnimalPersistenceService: DataPersistence {
     }
     
     func add(_ object: FavoriteAnimalPhoto) throws {
-        
+        let context = coreDataStack.viewContext
+        let entity = FavoriteEntity(context: context)
+        entity.id = object.id
+        entity.animalName = object.name
+        entity.photoUrl = object.photoStringURL
+        try context.save()
     }
     
     func delete(_ object: FavoriteAnimalPhoto) throws {

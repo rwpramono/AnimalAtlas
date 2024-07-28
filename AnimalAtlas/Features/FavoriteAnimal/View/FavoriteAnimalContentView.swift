@@ -9,15 +9,14 @@ import Foundation
 import UIKit
 
 final class FavoriteAnimalContentView: UIView {
-    private var images: [String] = []
+    private var images: [FavoriteAnimalPhoto] = []
     
     let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .horizontal
-        layout.minimumLineSpacing = 0
-        layout.minimumInteritemSpacing = 0
+        layout.minimumLineSpacing = 10
+        layout.minimumInteritemSpacing = 10
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.isPagingEnabled = true
+        collectionView.backgroundColor = .white
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         return collectionView
@@ -25,13 +24,11 @@ final class FavoriteAnimalContentView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
-        collectionView.register(AnimalItemViewCell.self, forCellWithReuseIdentifier: AnimalItemViewCell.identifier)
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.register(ImageWithLabelViewCell.self, forCellWithReuseIdentifier: "ImageWithLabelViewCell")
         
         addSubview(collectionView)
-        
-        backgroundColor = .cyan
-        
         NSLayoutConstraint.activate([
             collectionView.topAnchor.constraint(equalTo: topAnchor),
             collectionView.leadingAnchor.constraint(equalTo: leadingAnchor),
@@ -44,8 +41,27 @@ final class FavoriteAnimalContentView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    public func configure(images: [FavoriteAnimalPhoto]) {
+        self.images = images
+        self.collectionView.reloadData()
+    }
 }
 
-extension FavoriteAnimalContentView {
+extension FavoriteAnimalContentView: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return images.count
+    }
     
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageWithLabelViewCell", for: indexPath) as! ImageWithLabelViewCell
+        let image = images[indexPath.item].photoStringURL
+        let title = images[indexPath.item].name
+        cell.configure(with: UIImage(named: "Animal-Slide-4")!, title: title)
+        return cell
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 180, height: 180)
+    }
+
 }

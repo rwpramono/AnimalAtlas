@@ -10,12 +10,12 @@ import Foundation
 import UIKit
 
 final class AnimalGroupVC: UIViewController {
-    private var viewModel: AnimalGroupVM
+    private var viewModel: AnimalGroupVM<FavoriteAnimalPersistenceService>
     private lazy var contentView = AnimalGroupContentView()
 
     fileprivate var cancellables = Set<AnyCancellable>()
 
-    init(viewModel: AnimalGroupVM) {
+    init(viewModel: AnimalGroupVM<FavoriteAnimalPersistenceService>) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -43,6 +43,13 @@ final class AnimalGroupVC: UIViewController {
     }
     
     private func configureDataBinding() {
+        contentView.loveTapPublishers
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] in
+            self?.viewModel.saveFavoritePhoto($0)
+        }
+        .store(in: &cancellables)
+        
         viewModel.$data
             .compactMap { $0 }
             .receive(on: DispatchQueue.main)
@@ -52,7 +59,6 @@ final class AnimalGroupVC: UIViewController {
             .store(in: &cancellables)
         
         viewModel.$errorMessage
-            .dropFirst()
             .filter { !$0.isEmpty }
             .receive(on: DispatchQueue.main)
             .sink { [weak self] _ in

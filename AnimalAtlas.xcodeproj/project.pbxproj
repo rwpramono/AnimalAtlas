@@ -49,6 +49,7 @@
 		9A0EA6C92C5612D1005FB9C3 /* StorageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA6C82C5612D1005FB9C3 /* StorageType.swift */; };
 		9A0EA6CC2C56130B005FB9C3 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA6CB2C56130B005FB9C3 /* CoreDataStack.swift */; };
 		9A0EA6CE2C561391005FB9C3 /* FavoriteAnimalPersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA6CD2C561391005FB9C3 /* FavoriteAnimalPersistenceService.swift */; };
+		9A0EA6D02C562809005FB9C3 /* StaggeredCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA6CF2C562808005FB9C3 /* StaggeredCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +116,7 @@
 		9A0EA6C82C5612D1005FB9C3 /* StorageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageType.swift; sourceTree = "<group>"; };
 		9A0EA6CB2C56130B005FB9C3 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		9A0EA6CD2C561391005FB9C3 /* FavoriteAnimalPersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteAnimalPersistenceService.swift; sourceTree = "<group>"; };
+		9A0EA6CF2C562808005FB9C3 /* StaggeredCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaggeredCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -357,6 +359,7 @@
 			isa = PBXGroup;
 			children = (
 				9A0EA5E22C554CCE005FB9C3 /* FavoriteAnimalContentView.swift */,
+				9A0EA6CF2C562808005FB9C3 /* StaggeredCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -501,6 +504,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A0EA6BE2C55DB2D005FB9C3 /* AnimalPhotoTableViewCell.swift in Sources */,
+				9A0EA6D02C562809005FB9C3 /* StaggeredCollectionViewCell.swift in Sources */,
 				9A0EA56A2C5221D9005FB9C3 /* AnimalListVC.swift in Sources */,
 				9A0EA5C12C529140005FB9C3 /* AnimalItemViewCell.swift in Sources */,
 				9A0EA5DD2C554C3D005FB9C3 /* AnimalGroupFactory.swift in Sources */,

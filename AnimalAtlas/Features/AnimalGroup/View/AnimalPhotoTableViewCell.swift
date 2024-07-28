@@ -5,12 +5,15 @@
 //  Created by Rachmat Wahyu Pramono on 28/07/24.
 //
 
+import Combine
 import Foundation
 import UIKit
 
 class AnimalPhotoTableViewCell: UITableViewCell {
     static let reuseIdentifier = "AnimalPhotoTableViewCell"
     
+    var loveTapPublishers = PassthroughSubject<FavoriteAnimalPhoto, Never>()
+
     private let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
@@ -24,7 +27,7 @@ class AnimalPhotoTableViewCell: UITableViewCell {
         return collectionView
     }()
     
-    private var photos: [AnimalPhoto] = []
+    private var photos: AnimalGroupPhoto?
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -51,7 +54,7 @@ class AnimalPhotoTableViewCell: UITableViewCell {
         ])
     }
     
-    func configure(with photos: [AnimalPhoto]) {
+    func configure(with photos: AnimalGroupPhoto?) {
         self.photos = photos
         collectionView.reloadData()
     }
@@ -59,14 +62,15 @@ class AnimalPhotoTableViewCell: UITableViewCell {
 
 extension AnimalPhotoTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return photos.count
+        return photos?.animalPhotos.count ?? 0
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AnimalPhotoViewCell.identifier, for: indexPath) as? AnimalPhotoViewCell else {
             return UICollectionViewCell()
         }
-        cell.configure(with: photos[indexPath.item])
+        cell.configure(with: photos?.animalPhotos[indexPath.item], animalName: photos?.animalName)
+        cell.loveTapPublishers = loveTapPublishers
         return cell
     }
     
