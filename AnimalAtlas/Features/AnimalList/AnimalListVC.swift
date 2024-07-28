@@ -29,11 +29,11 @@ final class AnimalListVC: UIViewController {
     }
 
     override func viewDidLoad() {
-        configureDataSource()
-        
         viewModel.initialAnimalListData.forEach { [weak self] in
             self?.viewModel.getAnimalGroup(by: $0)
         }
+        
+        configureDataSource()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -42,15 +42,16 @@ final class AnimalListVC: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         navigationController?.setNavigationBarHidden(false, animated: false)
-
     }
     
     private func configureDataSource() {
         contentView.configure(
             with: viewModel.initialAnimalListData,
             onTapImage: { [weak self] selectedAnimalName in
-                guard let animalName = self?.viewModel.animalGroupName?[selectedAnimalName] else { return }
-                self?.animalImageTapped(with: animalName)
+                guard let animalName = self?.viewModel.animalGroupName[selectedAnimalName] else { return }
+                self?.animalImageTapped(
+                    with: AnimalGroup(groupName: selectedAnimalName, animalNames: animalName)
+                )
             },
             onTapLoveIcon: { [weak self] in
                 self?.favoriteButtonTapped()
@@ -63,7 +64,7 @@ final class AnimalListVC: UIViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    @objc private func animalImageTapped(with animalName: [String]) {
+    @objc private func animalImageTapped(with animalName: AnimalGroup) {
         let vc = AnimalGroupFactory.makeAnimalGroupVC(animalName)
         self.navigationController?.pushViewController(vc, animated: true)
     }

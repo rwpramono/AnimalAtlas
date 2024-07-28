@@ -30,7 +30,7 @@ final class AnimalGroupVC: UIViewController {
 
     override func viewDidLoad() {
         navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.title = "Animal Group"
+        navigationItem.title = viewModel.getAnimalGroupTitle()
 
         configureDataSource()
         configureDataBinding()

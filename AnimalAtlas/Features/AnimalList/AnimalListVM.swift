@@ -16,7 +16,7 @@ final class AnimalListVM: ObservableObject {
 
     @Published var errorMessage: String = ""
     
-    var animalGroupName: [String: [String]]?
+    var animalGroupName: [String: [String]] = [:]
     
     init(networkService: HttpNetwork) {
         self.networkService = networkService
@@ -33,7 +33,7 @@ final class AnimalListVM: ObservableObject {
                     }
                 },
                 receiveValue: { [weak self] (resultData: AnimalResponse) in
-                    self?.animalGroupName?[animalName] = resultData.map { $0.name }
+                    self?.animalGroupName[animalName] = resultData.map { $0.name }
                 }
             ).store(in: &cancellables)
     }    

@@ -9,7 +9,7 @@ import Combine
 import Foundation
 
 final class AnimalGroupVM: ObservableObject {
-    private let animalNames: [String]
+    private let animalNames: AnimalGroup
     private let networkService: HttpNetwork
 
     private var cancellables = Set<AnyCancellable>()
@@ -17,14 +17,17 @@ final class AnimalGroupVM: ObservableObject {
     @Published var errorMessage: String = ""
     @Published var data: [SearchPhotoResponse]?
 
-    init(animalNames: [String],
+    init(animalNames: AnimalGroup,
          networkService: HttpNetwork) {
         self.animalNames = animalNames
         self.networkService = networkService
     }
 
+    func getAnimalGroupTitle() -> String {
+        animalNames.groupName
+    }
     func getAllAnimalPhoto() {
-        animalNames.forEach { [weak self] in
+        animalNames.animalNames.forEach { [weak self] in
             self?.getSearchAnimalPhoto(by: $0)
         }
     }
