@@ -42,9 +42,13 @@ class AnimalPhotoViewCell: UICollectionViewCell {
             animalPhoto.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             animalPhoto.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             animalPhoto.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-            
-            loveIcon.topAnchor.constraint(equalTo: contentView.topAnchor, constant: -8),
-            loveIcon.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8)
+            animalPhoto.heightAnchor.constraint(equalToConstant: 180),
+            animalPhoto.widthAnchor.constraint(equalToConstant: 180),
+
+            loveIcon.heightAnchor.constraint(equalToConstant: 36),
+            loveIcon.widthAnchor.constraint(equalToConstant: 36),
+            loveIcon.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
+            loveIcon.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16)
         ])
         
         
@@ -59,7 +63,7 @@ class AnimalPhotoViewCell: UICollectionViewCell {
 
     func configure(with item: AnimalPhoto?) {
         guard let item else { return }
-        animalPhoto.image = UIImage(named: item.url)
+        animalPhoto.image = UIImage(named: "Animal-Slide-1")
     }
     
     @objc private func likeLabelTapped() {
