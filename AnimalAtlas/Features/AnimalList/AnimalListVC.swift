@@ -30,9 +30,10 @@ final class AnimalListVC: UIViewController {
 
     override func viewDidLoad() {
         configureDataSource()
-        configureDataBinding()
         
-//        viewModel.getAllPostsData()
+        viewModel.initialAnimalListData.forEach { [weak self] in
+            self?.viewModel.getAnimalGroup(by: $0)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -48,7 +49,8 @@ final class AnimalListVC: UIViewController {
         contentView.configure(
             with: viewModel.initialAnimalListData,
             onTapImage: { [weak self] selectedAnimalName in
-                self?.animalImageTapped(with: selectedAnimalName)
+                guard let animalName = self?.viewModel.animalGroupName?[selectedAnimalName] else { return }
+                self?.animalImageTapped(with: animalName)
             },
             onTapLoveIcon: { [weak self] in
                 self?.favoriteButtonTapped()
@@ -56,65 +58,13 @@ final class AnimalListVC: UIViewController {
         )
     }
     
-    private func configureDataBinding() {
-//        viewModel.$data
-//            .compactMap { $0 }
-//            .first(where: { !$0.isEmpty })
-//            .receive(on: DispatchQueue.main)
-//            .sink { [weak self] _ in
-//                self?.contentView.tableView.reloadData()
-//            }
-//            .store(in: &cancellables)
-//        
-//        viewModel.$errorMessage
-//            .dropFirst()
-//            .first(where: { !$0.isEmpty })
-//            .receive(on: DispatchQueue.main)
-//            .sink { [weak self] errorMessage in
-//                self?.title = "API Gateway Error: \(errorMessage)"
-//            }
-//            .store(in: &cancellables)
-
-    }
-    
     @objc private func favoriteButtonTapped() {
         let vc = FavoriteAnimalFactory.makeFavoriteAnimalVC()
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    @objc private func animalImageTapped(with name: String) {
-        let vc = AnimalGroupFactory.makeAnimalGroupVC(name)
+    @objc private func animalImageTapped(with animalName: [String]) {
+        let vc = AnimalGroupFactory.makeAnimalGroupVC(animalName)
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }
-
-//extension AnimalListVC: UITableViewDataSource {
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return viewModel.data?.count ?? 0
-//    }
-//    
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        guard let cell = tableView.dequeueReusableCell(withIdentifier: "AnimalItemViewCell", for: indexPath) as? AnimalItemViewCell,
-//              let data = viewModel.data?[indexPath.row] else {
-//            return UITableViewCell()
-//        }
-//        
-//        cell.configure(with: data)
-//        cell.cellTapPublishers
-//            .sink { [weak self] _ in
-//                
-//            }
-//            .store(in: &cancellables)
-//        
-//        cell.likeTapPublishers
-//            .sink { [weak self] _ in
-//                
-//            }
-//            .store(in: &cancellables)
-//        return cell
-//    }
-//    
-//    func navigateToDetail() {
-//        
-//    }
-//}

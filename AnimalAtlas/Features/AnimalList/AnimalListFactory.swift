@@ -9,7 +9,7 @@ import Foundation
 
 final class AnimalListFactory {
     static func makeAnimalListVC() -> AnimalListVC {
-        let vm = AnimalListVM()
+        let vm = AnimalListVM(networkService: DependencyContainer.shared.networkService)
         return AnimalListVC(viewModel: vm)
     }
 }

@@ -10,26 +10,31 @@ import Foundation
 
 final class AnimalListVM: ObservableObject {
     let initialAnimalListData = ["Elephant", "Lion", "Fox", "Dog", "Shark", "Turtle", "Whale", "Penguin"]
-
+    
+    private let networkService: HttpNetwork
     private var cancellables = Set<AnyCancellable>()
 
     @Published var errorMessage: String = ""
-        
-    func getData() {
-        
-        // FIXME: Add query from core data
-//        let api = AnimalAPICollections.getAnimal(by: "")
-//        networkService.execute(api)
-//            .receive(on: DispatchQueue.main)
-//            .sink(
-//                receiveCompletion: { [weak self] completion in
-//                    if case .failure(let failure) = completion {
-//                        self?.errorMessage = failure.localizedDescription
-//                    }
-//                },
-//                receiveValue: { [weak self] (resultData: AnimalResponse) in
-//                    self?.data = resultData
-//                }
-//            ).store(in: &cancellables)
+    
+    var animalGroupName: [String: [String]]?
+    
+    init(networkService: HttpNetwork) {
+        self.networkService = networkService
+    }
+    
+    func getAnimalGroup(by animalName: String) {
+        let getAnimalAPI = AnimalAPICollections.getAnimal(by: animalName)
+        networkService.execute(getAnimalAPI)
+            .receive(on: DispatchQueue.main)
+            .sink(
+                receiveCompletion: { [weak self] completion in
+                    if case .failure(let failure) = completion {
+                        self?.errorMessage = failure.localizedDescription
+                    }
+                },
+                receiveValue: { [weak self] (resultData: AnimalResponse) in
+                    self?.animalGroupName?[animalName] = resultData.map { $0.name }
+                }
+            ).store(in: &cancellables)
     }    
 }
