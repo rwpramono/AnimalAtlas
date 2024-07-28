@@ -10,12 +10,12 @@ import Foundation
 import UIKit
 
 final class FavoriteAnimalVC: UIViewController {
-    private var viewModel: FavoriteAnimalVM
+    private var viewModel: FavoriteAnimalVM<FavoriteAnimalPersistenceService>
     private lazy var contentView = FavoriteAnimalContentView()
 
     fileprivate var cancellables = Set<AnyCancellable>()
 
-    init(viewModel: FavoriteAnimalVM) {
+    init(viewModel: FavoriteAnimalVM<FavoriteAnimalPersistenceService>) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }

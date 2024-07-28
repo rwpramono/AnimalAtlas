@@ -8,7 +8,9 @@
 import Foundation
 
 protocol DataPersistence {
-    func save<T: Codable>(_ data: T) throws
-    func load<T: Codable>(_ data: T.Type) throws -> T
-    func delete<T: Codable>(_ data: T) throws
+    associatedtype T: Codable
+
+    func load() throws -> [T]
+    func add(_ object: T) throws
+    func delete(_ object: T) throws
 }

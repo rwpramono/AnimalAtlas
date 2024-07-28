@@ -9,7 +9,11 @@ import Foundation
 
 final class FavoriteAnimalFactory {
     static func makeFavoriteAnimalVC() -> FavoriteAnimalVC {
-        let vm = FavoriteAnimalVM()
+        let vm = FavoriteAnimalVM(
+            dataPersistence: FavoriteAnimalPersistenceService(
+                coreDataStack: DependencyContainer.shared.coreDataStack
+            )
+        )
         return FavoriteAnimalVC(viewModel: vm)
     }
 }

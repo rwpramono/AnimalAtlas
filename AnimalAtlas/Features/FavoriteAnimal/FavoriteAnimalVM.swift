@@ -7,6 +7,11 @@
 
 import Foundation
 
-final class FavoriteAnimalVM: ObservableObject {
+final class FavoriteAnimalVM<T: DataPersistence>: ObservableObject where T.T == FavoriteAnimalPhoto {
+    private let dataPersistence: T
     
+    init(dataPersistence: T) {
+        self.dataPersistence = dataPersistence
+    }
+
 }

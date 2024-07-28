@@ -32,11 +32,9 @@
 		9A0EA5C12C529140005FB9C3 /* AnimalItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA5C02C529140005FB9C3 /* AnimalItemViewCell.swift */; };
 		9A0EA5C32C533433005FB9C3 /* AnimalPhotoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA5C22C533433005FB9C3 /* AnimalPhotoViewCell.swift */; };
 		9A0EA5C92C54F63F005FB9C3 /* DataPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA5C82C54F63F005FB9C3 /* DataPersistence.swift */; };
-		9A0EA5CC2C54F68A005FB9C3 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA5CB2C54F68A005FB9C3 /* CoreDataService.swift */; };
-		9A0EA5CE2C54F6CE005FB9C3 /* CoreDataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA5CD2C54F6CE005FB9C3 /* CoreDataError.swift */; };
-		9A0EA5D12C54F70F005FB9C3 /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA5CF2C54F70F005FB9C3 /* CoreDataModel.xcdatamodeld */; };
-		9A0EA5D42C552C71005FB9C3 /* AnimalListEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA5D32C552C71005FB9C3 /* AnimalListEntity.swift */; };
-		9A0EA5D62C552C83005FB9C3 /* FavoriteEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA5D52C552C83005FB9C3 /* FavoriteEntity.swift */; };
+		9A0EA5CE2C54F6CE005FB9C3 /* DataPersistenceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA5CD2C54F6CE005FB9C3 /* DataPersistenceError.swift */; };
+		9A0EA5D12C54F70F005FB9C3 /* AnimalAtlasCoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA5CF2C54F70F005FB9C3 /* AnimalAtlasCoreDataModel.xcdatamodeld */; };
+		9A0EA5D62C552C83005FB9C3 /* FavoriteAnimalPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA5D52C552C83005FB9C3 /* FavoriteAnimalPhoto.swift */; };
 		9A0EA5D82C55456A005FB9C3 /* CodingUserInfoKey+NSManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA5D72C55456A005FB9C3 /* CodingUserInfoKey+NSManagedObject.swift */; };
 		9A0EA5DB2C554C32005FB9C3 /* FavoriteAnimalFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA5DA2C554C32005FB9C3 /* FavoriteAnimalFactory.swift */; };
 		9A0EA5DD2C554C3D005FB9C3 /* AnimalGroupFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA5DC2C554C3D005FB9C3 /* AnimalGroupFactory.swift */; };
@@ -48,6 +46,9 @@
 		9A0EA6B82C55611B005FB9C3 /* AnimalGroupContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA6B72C55611B005FB9C3 /* AnimalGroupContentView.swift */; };
 		9A0EA6BC2C55D60F005FB9C3 /* AnimalGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA6BB2C55D60F005FB9C3 /* AnimalGroup.swift */; };
 		9A0EA6BE2C55DB2D005FB9C3 /* AnimalPhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA6BD2C55DB2D005FB9C3 /* AnimalPhotoTableViewCell.swift */; };
+		9A0EA6C92C5612D1005FB9C3 /* StorageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA6C82C5612D1005FB9C3 /* StorageType.swift */; };
+		9A0EA6CC2C56130B005FB9C3 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA6CB2C56130B005FB9C3 /* CoreDataStack.swift */; };
+		9A0EA6CE2C561391005FB9C3 /* FavoriteAnimalPersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA6CD2C561391005FB9C3 /* FavoriteAnimalPersistenceService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,11 +98,9 @@
 		9A0EA5C02C529140005FB9C3 /* AnimalItemViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalItemViewCell.swift; sourceTree = "<group>"; };
 		9A0EA5C22C533433005FB9C3 /* AnimalPhotoViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalPhotoViewCell.swift; sourceTree = "<group>"; };
 		9A0EA5C82C54F63F005FB9C3 /* DataPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPersistence.swift; sourceTree = "<group>"; };
-		9A0EA5CB2C54F68A005FB9C3 /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
-		9A0EA5CD2C54F6CE005FB9C3 /* CoreDataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataError.swift; sourceTree = "<group>"; };
+		9A0EA5CD2C54F6CE005FB9C3 /* DataPersistenceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPersistenceError.swift; sourceTree = "<group>"; };
 		9A0EA5D02C54F70F005FB9C3 /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
-		9A0EA5D32C552C71005FB9C3 /* AnimalListEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalListEntity.swift; sourceTree = "<group>"; };
-		9A0EA5D52C552C83005FB9C3 /* FavoriteEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteEntity.swift; sourceTree = "<group>"; };
+		9A0EA5D52C552C83005FB9C3 /* FavoriteAnimalPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteAnimalPhoto.swift; sourceTree = "<group>"; };
 		9A0EA5D72C55456A005FB9C3 /* CodingUserInfoKey+NSManagedObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CodingUserInfoKey+NSManagedObject.swift"; sourceTree = "<group>"; };
 		9A0EA5DA2C554C32005FB9C3 /* FavoriteAnimalFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteAnimalFactory.swift; sourceTree = "<group>"; };
 		9A0EA5DC2C554C3D005FB9C3 /* AnimalGroupFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalGroupFactory.swift; sourceTree = "<group>"; };
@@ -113,6 +112,9 @@
 		9A0EA6B72C55611B005FB9C3 /* AnimalGroupContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalGroupContentView.swift; sourceTree = "<group>"; };
 		9A0EA6BB2C55D60F005FB9C3 /* AnimalGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalGroup.swift; sourceTree = "<group>"; };
 		9A0EA6BD2C55DB2D005FB9C3 /* AnimalPhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalPhotoTableViewCell.swift; sourceTree = "<group>"; };
+		9A0EA6C82C5612D1005FB9C3 /* StorageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageType.swift; sourceTree = "<group>"; };
+		9A0EA6CB2C56130B005FB9C3 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		9A0EA6CD2C561391005FB9C3 /* FavoriteAnimalPersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteAnimalPersistenceService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,9 +218,8 @@
 			isa = PBXGroup;
 			children = (
 				9A0EA6BB2C55D60F005FB9C3 /* AnimalGroup.swift */,
-				9A0EA5D32C552C71005FB9C3 /* AnimalListEntity.swift */,
 				9A0EA5B02C522DFF005FB9C3 /* AnimalResponse.swift */,
-				9A0EA5D52C552C83005FB9C3 /* FavoriteEntity.swift */,
+				9A0EA5D52C552C83005FB9C3 /* FavoriteAnimalPhoto.swift */,
 				9A0EA5B72C528FAE005FB9C3 /* SearchPhotoResponse.swift */,
 			);
 			path = Models;
@@ -324,8 +325,9 @@
 		9A0EA5C62C54F601005FB9C3 /* PersistenceService */ = {
 			isa = PBXGroup;
 			children = (
-				9A0EA5CA2C54F677005FB9C3 /* CoreDataService */,
+				9A0EA6CD2C561391005FB9C3 /* FavoriteAnimalPersistenceService.swift */,
 				9A0EA5C72C54F62D005FB9C3 /* Config */,
+				9A0EA6CA2C5612F8005FB9C3 /* CoreDataStack */,
 			);
 			path = PersistenceService;
 			sourceTree = "<group>";
@@ -334,18 +336,10 @@
 			isa = PBXGroup;
 			children = (
 				9A0EA5C82C54F63F005FB9C3 /* DataPersistence.swift */,
+				9A0EA5CD2C54F6CE005FB9C3 /* DataPersistenceError.swift */,
+				9A0EA6C82C5612D1005FB9C3 /* StorageType.swift */,
 			);
 			path = Config;
-			sourceTree = "<group>";
-		};
-		9A0EA5CA2C54F677005FB9C3 /* CoreDataService */ = {
-			isa = PBXGroup;
-			children = (
-				9A0EA5CB2C54F68A005FB9C3 /* CoreDataService.swift */,
-				9A0EA5CD2C54F6CE005FB9C3 /* CoreDataError.swift */,
-				9A0EA5CF2C54F70F005FB9C3 /* CoreDataModel.xcdatamodeld */,
-			);
-			path = CoreDataService;
 			sourceTree = "<group>";
 		};
 		9A0EA5D92C554C20005FB9C3 /* FavoriteAnimal */ = {
@@ -365,6 +359,15 @@
 				9A0EA5E22C554CCE005FB9C3 /* FavoriteAnimalContentView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		9A0EA6CA2C5612F8005FB9C3 /* CoreDataStack */ = {
+			isa = PBXGroup;
+			children = (
+				9A0EA5CF2C54F70F005FB9C3 /* AnimalAtlasCoreDataModel.xcdatamodeld */,
+				9A0EA6CB2C56130B005FB9C3 /* CoreDataStack.swift */,
+			);
+			path = CoreDataStack;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -509,7 +512,6 @@
 				9A0EA5DF2C554C58005FB9C3 /* FavoriteAnimalVC.swift in Sources */,
 				9A0EA5E12C554C5F005FB9C3 /* FavoriteAnimalVM.swift in Sources */,
 				9A0EA5A92C5227ED005FB9C3 /* URLSessionService.swift in Sources */,
-				9A0EA5CC2C54F68A005FB9C3 /* CoreDataService.swift in Sources */,
 				9A0EA5B62C528E37005FB9C3 /* PexelAPI.swift in Sources */,
 				9A0EA5662C5221D9005FB9C3 /* AppDelegate.swift in Sources */,
 				9A0EA59D2C522537005FB9C3 /* HttpNetwork.swift in Sources */,
@@ -518,21 +520,23 @@
 				9A0EA6BC2C55D60F005FB9C3 /* AnimalGroup.swift in Sources */,
 				9A0EA5AF2C522B4D005FB9C3 /* AnimalsAPICollections.swift in Sources */,
 				9A0EA6B62C5560C2005FB9C3 /* AnimalGroupVM.swift in Sources */,
+				9A0EA6C92C5612D1005FB9C3 /* StorageType.swift in Sources */,
 				9A0EA5B12C522DFF005FB9C3 /* AnimalResponse.swift in Sources */,
 				9A0EA5A02C52255D005FB9C3 /* APIDataRequest.swift in Sources */,
 				9A0EA5A32C522759005FB9C3 /* HttpMethod.swift in Sources */,
-				9A0EA5D12C54F70F005FB9C3 /* CoreDataModel.xcdatamodeld in Sources */,
+				9A0EA6CE2C561391005FB9C3 /* FavoriteAnimalPersistenceService.swift in Sources */,
+				9A0EA5D12C54F70F005FB9C3 /* AnimalAtlasCoreDataModel.xcdatamodeld in Sources */,
 				9A0EA5E32C554CCE005FB9C3 /* FavoriteAnimalContentView.swift in Sources */,
+				9A0EA6CC2C56130B005FB9C3 /* CoreDataStack.swift in Sources */,
 				9A0EA5B42C528C46005FB9C3 /* DependencyContainer.swift in Sources */,
 				9A0EA5682C5221D9005FB9C3 /* SceneDelegate.swift in Sources */,
 				9A0EA5D82C55456A005FB9C3 /* CodingUserInfoKey+NSManagedObject.swift in Sources */,
-				9A0EA5D42C552C71005FB9C3 /* AnimalListEntity.swift in Sources */,
 				9A0EA6B82C55611B005FB9C3 /* AnimalGroupContentView.swift in Sources */,
-				9A0EA5CE2C54F6CE005FB9C3 /* CoreDataError.swift in Sources */,
+				9A0EA5CE2C54F6CE005FB9C3 /* DataPersistenceError.swift in Sources */,
 				9A0EA5DB2C554C32005FB9C3 /* FavoriteAnimalFactory.swift in Sources */,
 				9A0EA5BC2C5290FF005FB9C3 /* AnimalListVM.swift in Sources */,
 				9A0EA5B82C528FAE005FB9C3 /* SearchPhotoResponse.swift in Sources */,
-				9A0EA5D62C552C83005FB9C3 /* FavoriteEntity.swift in Sources */,
+				9A0EA5D62C552C83005FB9C3 /* FavoriteAnimalPhoto.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -881,13 +885,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		9A0EA5CF2C54F70F005FB9C3 /* CoreDataModel.xcdatamodeld */ = {
+		9A0EA5CF2C54F70F005FB9C3 /* AnimalAtlasCoreDataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				9A0EA5D02C54F70F005FB9C3 /* CoreDataModel.xcdatamodel */,
 			);
 			currentVersion = 9A0EA5D02C54F70F005FB9C3 /* CoreDataModel.xcdatamodel */;
-			path = CoreDataModel.xcdatamodeld;
+			path = AnimalAtlasCoreDataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
