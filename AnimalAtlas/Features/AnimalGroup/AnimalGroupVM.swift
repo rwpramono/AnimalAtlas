@@ -54,12 +54,20 @@ final class AnimalGroupVM<T: DataPersistence>: ObservableObject where T.T == Fav
             ).store(in: &cancellables)
     }
     
-    func saveFavoritePhoto(_ photo: FavoriteAnimalPhoto) {
+    func toggleFavoritePhoto(_ photo: FavoriteAnimalPhoto) {
         do {
-            try dataPersistence.add(photo)
+            try dataPersistence.delete(photo)
+        }
+        catch DataPersistenceError.deleteFailed(DataPersistenceError.predicateDataNotFound) {
+            do {
+                try dataPersistence.add(photo)
+            }
+            catch {
+                errorMessage = DataPersistenceError.saveFailed(error).localizedDescription
+            }
         }
         catch {
-            errorMessage = DataPersistenceError.saveFailed(error).localizedDescription
+            errorMessage = DataPersistenceError.deleteFailed(error).localizedDescription
         }
     }
 }

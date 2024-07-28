@@ -34,23 +34,3 @@ class CoreDataStack {
 
     }
 }
-
-extension CoreDataStack {
-    func saveContext() {
-        guard viewContext.hasChanges else { return }
-        do {
-            try viewContext.save()
-        } catch {
-            let nsError = error as NSError
-            NSLog("Unresolved error saving context: \(nsError), \(nsError.userInfo)")
-        }
-    }
-
-    func fetch<T: NSManagedObject>(_ request: NSFetchRequest<T>) -> [T] {
-        do {
-            return try viewContext.fetch(request)
-        } catch {
-            return []
-        }
-    }
-}
