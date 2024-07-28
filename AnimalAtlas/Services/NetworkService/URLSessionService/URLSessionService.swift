@@ -38,7 +38,7 @@ public class URLSessionService: HttpNetwork {
                 }
             }
             .mapError { errorMessage in
-                errorMessage as? HttpNetworkError ?? HttpNetworkError.other(message: "\(errorMessage.localizedDescription)")
+                return errorMessage as? HttpNetworkError ?? HttpNetworkError.other(message: "\(errorMessage.localizedDescription)")
             }
             .eraseToAnyPublisher()
     }

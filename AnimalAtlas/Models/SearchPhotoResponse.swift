@@ -88,3 +88,9 @@ public struct PhotoSource: Codable {
         self.tiny = tiny
     }
 }
+
+// MARK: - AnimalGroupPhoto
+public struct AnimalGroupPhoto {
+    let animalName: String
+    let animalPhotos: [AnimalPhoto]
+}

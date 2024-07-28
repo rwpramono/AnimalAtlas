@@ -11,11 +11,11 @@ import Foundation
 final class AnimalGroupVM: ObservableObject {
     private let animalNames: AnimalGroup
     private let networkService: HttpNetwork
-
+    
     private var cancellables = Set<AnyCancellable>()
 
     @Published var errorMessage: String = ""
-    @Published var data: [SearchPhotoResponse]?
+    @Published var data: [AnimalGroupPhoto]? = []
 
     init(animalNames: AnimalGroup,
          networkService: HttpNetwork) {
@@ -26,16 +26,16 @@ final class AnimalGroupVM: ObservableObject {
     func getAnimalGroupTitle() -> String {
         animalNames.groupName
     }
-    func getAllAnimalPhoto() {
-        animalNames.animalNames.forEach { [weak self] in
-            self?.getSearchAnimalPhoto(by: $0)
-        }
-    }
     
-    func getSearchAnimalPhoto(by animalName: String) {
-        let searchPhotoAnimalAPI = AnimalAPICollections.searchAnimalPhoto(by: animalName)
+    func getAllAnimalPhoto() {
+        let animalPhotoCounter = data?.count ?? 0
+        guard animalPhotoCounter != animalNames.animalNames.count else { return }
+        let animalName = animalNames.animalNames[animalPhotoCounter]
+        let searchPhotoAnimalAPI = AnimalAPICollections.searchAnimalPhoto(
+            by: animalName
+        )
         networkService.execute(searchPhotoAnimalAPI)
-            .receive(on: DispatchQueue.main)
+            .delay(for: .seconds(5), scheduler: DispatchQueue.main)
             .sink(
                 receiveCompletion: { [weak self] completion in
                     if case .failure(let failure) = completion {
@@ -43,7 +43,10 @@ final class AnimalGroupVM: ObservableObject {
                     }
                 },
                 receiveValue: { [weak self] (resultData: SearchPhotoResponse) in
-                    self?.data?.append(resultData)
+                    self?.data?.append(
+                        AnimalGroupPhoto(animalName: animalName, animalPhotos: resultData.photos)
+                    )
+                    self?.getAllAnimalPhoto()
                 }
             ).store(in: &cancellables)
     }

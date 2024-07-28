@@ -17,7 +17,7 @@ public struct AnimalAPICollections {
             .query([
                 "query": name,
                 "page": "1",
-                "per_page": "10"
+                "per_page": "5"
             ])
     }
 }
