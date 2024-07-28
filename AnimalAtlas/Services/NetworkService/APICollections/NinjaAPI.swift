@@ -12,7 +12,7 @@ public struct NinjaAPI<T: Decodable>: APIDataRequest {
     public private(set) var urlComponent: URLComponents?
     
     init(_ httpMethod: HttpMethod, path: String) {
-        guard let urlComponent = URLComponents(string: "some base url" + path),
+        guard let urlComponent = URLComponents(string: "https://api.api-ninjas.com/v1/" + path),
               let completeUrl = urlComponent.url else {
             self.urlRequest = nil
             self.urlComponent = nil
@@ -22,7 +22,7 @@ public struct NinjaAPI<T: Decodable>: APIDataRequest {
         urlRequest.httpMethod = httpMethod.rawValue
         urlRequest.allHTTPHeaderFields = [
             "Content-Type": "application/json",
-            "X-Api-Key": "some api key"
+            "X-Api-Key": "pfFQJxLiPMYqvY5rZXbYdw==VBjYVanTRFZdEhx9"
         ]
         self.urlComponent = urlComponent
         self.urlRequest = urlRequest
@@ -40,6 +40,7 @@ public struct NinjaAPI<T: Decodable>: APIDataRequest {
         apiAttribute.urlComponent?.queryItems = query.map {
             URLQueryItem(name: $0.key, value: $0.value)
         }
+        apiAttribute.urlRequest?.url = apiAttribute.urlComponent?.url
         return apiAttribute
     }
 }
