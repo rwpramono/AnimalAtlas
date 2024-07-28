@@ -28,7 +28,7 @@ class AnimalPhotoViewCell: UICollectionViewCell {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
-        imageView.image = UIImage(systemName: "heart.circle")?.withTintColor(.systemPink, renderingMode: .alwaysOriginal)
+        imageView.image = UIImage(systemName: "heart.fill")?.withTintColor(.white, renderingMode: .alwaysOriginal)
         return imageView
     }()
 

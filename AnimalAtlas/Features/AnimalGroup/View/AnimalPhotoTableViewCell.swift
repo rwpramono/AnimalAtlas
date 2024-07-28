@@ -72,6 +72,6 @@ extension AnimalPhotoTableViewCell: UICollectionViewDelegate, UICollectionViewDa
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 224, height: 224)
+        return CGSize(width: 180, height: 180)
     }
 }

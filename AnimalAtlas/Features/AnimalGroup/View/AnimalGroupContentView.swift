@@ -12,6 +12,13 @@ final class AnimalGroupContentView: UIView {
     private var animalPhoto: [AnimalGroupPhoto]?
     private var onTapLoveIcon: ((Int?) -> Void)?
 
+    private let activityIndicator: UIActivityIndicatorView = {
+        let activityIndicator = UIActivityIndicatorView(style: .large)
+        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+        activityIndicator.hidesWhenStopped = true
+        return activityIndicator
+    }()
+
     private let tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -33,8 +40,11 @@ final class AnimalGroupContentView: UIView {
     
     private func setupViews() {
         addSubview(tableView)
+        addSubview(activityIndicator)
         tableView.delegate = self
         tableView.dataSource = self
+        
+        activityIndicator.startAnimating()
     }
     
     private func setupConstraints() {
@@ -42,13 +52,20 @@ final class AnimalGroupContentView: UIView {
             tableView.topAnchor.constraint(equalTo: topAnchor),
             tableView.bottomAnchor.constraint(equalTo: bottomAnchor),
             tableView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            tableView.trailingAnchor.constraint(equalTo: trailingAnchor)
+            tableView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            
+            activityIndicator.topAnchor.constraint(equalTo: topAnchor, constant: 72),
+            activityIndicator.centerXAnchor.constraint(equalTo: centerXAnchor)
         ])
     }
     
     public func configure(_ photo: [AnimalGroupPhoto]) {
         animalPhoto = photo
         tableView.reloadData()
+    }
+    
+    public func stopIndicator() {
+        activityIndicator.stopAnimating()
     }
 }
 
@@ -62,7 +79,7 @@ extension AnimalGroupContentView: UITableViewDataSource, UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        224
+        180
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

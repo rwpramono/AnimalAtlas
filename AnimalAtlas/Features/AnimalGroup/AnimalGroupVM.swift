@@ -35,7 +35,7 @@ final class AnimalGroupVM: ObservableObject {
             by: animalName
         )
         networkService.execute(searchPhotoAnimalAPI)
-            .delay(for: .seconds(5), scheduler: DispatchQueue.main)
+            .delay(for: .seconds(3), scheduler: DispatchQueue.main)
             .sink(
                 receiveCompletion: { [weak self] completion in
                     if case .failure(let failure) = completion {

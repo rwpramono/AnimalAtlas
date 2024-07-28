@@ -50,5 +50,14 @@ final class AnimalGroupVC: UIViewController {
                 self?.contentView.configure(animalPhoto)
             }
             .store(in: &cancellables)
-    }    
+        
+        viewModel.$errorMessage
+            .dropFirst()
+            .filter { !$0.isEmpty }
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] _ in
+                self?.contentView.stopIndicator()
+            }
+            .store(in: &cancellables)
+    }
 }
