@@ -12,7 +12,7 @@ public struct SearchPhotoResponse: Codable {
     public let page, perPage: Int
     public let photos: [AnimalPhoto]
     public let totalResults: Int
-    public let nextPage: String
+    public let nextPage: String?
 
     public enum CodingKeys: String, CodingKey {
         case page

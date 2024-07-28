@@ -9,7 +9,7 @@ import Foundation
 
 public struct AnimalAPICollections {
     static func getAnimal(by name: String) -> APIDataRequest {
-        NinjaAPI<AnimalResponse>(.get, path: "animals").query(["name": "Elephant"])
+        NinjaAPI<AnimalResponse>(.get, path: "animals").query(["name": name])
     }
     
     static func searchAnimalPhoto(by name: String) -> APIDataRequest {
