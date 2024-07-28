@@ -35,7 +35,6 @@
 		9A0EA5CE2C54F6CE005FB9C3 /* DataPersistenceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA5CD2C54F6CE005FB9C3 /* DataPersistenceError.swift */; };
 		9A0EA5D12C54F70F005FB9C3 /* AnimalAtlasCoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA5CF2C54F70F005FB9C3 /* AnimalAtlasCoreDataModel.xcdatamodeld */; };
 		9A0EA5D62C552C83005FB9C3 /* FavoriteAnimalPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA5D52C552C83005FB9C3 /* FavoriteAnimalPhoto.swift */; };
-		9A0EA5D82C55456A005FB9C3 /* CodingUserInfoKey+NSManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA5D72C55456A005FB9C3 /* CodingUserInfoKey+NSManagedObject.swift */; };
 		9A0EA5DB2C554C32005FB9C3 /* FavoriteAnimalFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA5DA2C554C32005FB9C3 /* FavoriteAnimalFactory.swift */; };
 		9A0EA5DD2C554C3D005FB9C3 /* AnimalGroupFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA5DC2C554C3D005FB9C3 /* AnimalGroupFactory.swift */; };
 		9A0EA5DF2C554C58005FB9C3 /* FavoriteAnimalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA5DE2C554C58005FB9C3 /* FavoriteAnimalVC.swift */; };
@@ -102,7 +101,6 @@
 		9A0EA5CD2C54F6CE005FB9C3 /* DataPersistenceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPersistenceError.swift; sourceTree = "<group>"; };
 		9A0EA5D02C54F70F005FB9C3 /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
 		9A0EA5D52C552C83005FB9C3 /* FavoriteAnimalPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteAnimalPhoto.swift; sourceTree = "<group>"; };
-		9A0EA5D72C55456A005FB9C3 /* CodingUserInfoKey+NSManagedObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CodingUserInfoKey+NSManagedObject.swift"; sourceTree = "<group>"; };
 		9A0EA5DA2C554C32005FB9C3 /* FavoriteAnimalFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteAnimalFactory.swift; sourceTree = "<group>"; };
 		9A0EA5DC2C554C3D005FB9C3 /* AnimalGroupFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalGroupFactory.swift; sourceTree = "<group>"; };
 		9A0EA5DE2C554C58005FB9C3 /* FavoriteAnimalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteAnimalVC.swift; sourceTree = "<group>"; };
@@ -289,7 +287,6 @@
 			isa = PBXGroup;
 			children = (
 				9A0EA5B32C528C46005FB9C3 /* DependencyContainer.swift */,
-				9A0EA5D72C55456A005FB9C3 /* CodingUserInfoKey+NSManagedObject.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -534,7 +531,6 @@
 				9A0EA6CC2C56130B005FB9C3 /* CoreDataStack.swift in Sources */,
 				9A0EA5B42C528C46005FB9C3 /* DependencyContainer.swift in Sources */,
 				9A0EA5682C5221D9005FB9C3 /* SceneDelegate.swift in Sources */,
-				9A0EA5D82C55456A005FB9C3 /* CodingUserInfoKey+NSManagedObject.swift in Sources */,
 				9A0EA6B82C55611B005FB9C3 /* AnimalGroupContentView.swift in Sources */,
 				9A0EA5CE2C54F6CE005FB9C3 /* DataPersistenceError.swift in Sources */,
 				9A0EA5DB2C554C32005FB9C3 /* FavoriteAnimalFactory.swift in Sources */,

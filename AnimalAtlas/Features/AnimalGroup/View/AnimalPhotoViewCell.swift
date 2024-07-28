@@ -66,7 +66,7 @@ class AnimalPhotoViewCell: UICollectionViewCell {
         self.animalData = FavoriteAnimalPhoto(
             id: "\(item.id)",
             name: animalName,
-            photoStringURL: item.url
+            photoStringURL: item.src.medium
         )
     }
     

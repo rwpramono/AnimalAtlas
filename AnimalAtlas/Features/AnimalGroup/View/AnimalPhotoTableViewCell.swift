@@ -78,4 +78,15 @@ extension AnimalPhotoTableViewCell: UICollectionViewDelegate, UICollectionViewDa
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 180, height: 180)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let photos else { return }
+        let animalPhotos = photos.animalPhotos[indexPath.item]
+        let animalData = FavoriteAnimalPhoto(
+            id: "\(animalPhotos.id)",
+            name: photos.animalName,
+            photoStringURL: animalPhotos.src.medium
+        )
+        loveTapPublishers.send(animalData)
+    }
 }
