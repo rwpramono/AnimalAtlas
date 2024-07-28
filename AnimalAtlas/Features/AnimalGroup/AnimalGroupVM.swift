@@ -9,24 +9,29 @@ import Combine
 import Foundation
 
 final class AnimalGroupVM: ObservableObject {
-    private let animalGroupName: String?
+    private let animalNames: [String]
     private let networkService: HttpNetwork
 
     private var cancellables = Set<AnyCancellable>()
 
     @Published var errorMessage: String = ""
-    @Published var data: AnimalResponse?
+    @Published var data: [SearchPhotoResponse]?
 
-    init(animalGroupName: String,
+    init(animalNames: [String],
          networkService: HttpNetwork) {
-        self.animalGroupName = animalGroupName
+        self.animalNames = animalNames
         self.networkService = networkService
     }
 
-    func getAllAnimalGroup() {
-        guard let animalGroupName else { return }
-        let api = AnimalAPICollections.getAnimal(by: animalGroupName)
-        networkService.execute(api)
+    func getAllAnimalPhoto() {
+        animalNames.forEach { [weak self] in
+            self?.getSearchAnimalPhoto(by: $0)
+        }
+    }
+    
+    func getSearchAnimalPhoto(by animalName: String) {
+        let searchPhotoAnimalAPI = AnimalAPICollections.searchAnimalPhoto(by: animalName)
+        networkService.execute(searchPhotoAnimalAPI)
             .receive(on: DispatchQueue.main)
             .sink(
                 receiveCompletion: { [weak self] completion in
@@ -34,8 +39,8 @@ final class AnimalGroupVM: ObservableObject {
                         self?.errorMessage = failure.localizedDescription
                     }
                 },
-                receiveValue: { [weak self] (resultData: AnimalResponse) in
-                    self?.data = resultData
+                receiveValue: { [weak self] (resultData: SearchPhotoResponse) in
+                    self?.data?.append(resultData)
                 }
             ).store(in: &cancellables)
     }

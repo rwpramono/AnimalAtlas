@@ -35,7 +35,7 @@ final class AnimalGroupVC: UIViewController {
         configureDataSource()
         configureDataBinding()
         
-        viewModel.getAllAnimalGroup()
+        viewModel.getAllAnimalPhoto()
     }
     
     private func configureDataSource() {

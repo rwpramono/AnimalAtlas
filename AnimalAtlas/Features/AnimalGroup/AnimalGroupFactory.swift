@@ -8,8 +8,8 @@
 import Foundation
 
 final class AnimalGroupFactory {
-    static func makeAnimalGroupVC(_ name: String) -> AnimalGroupVC {
-        let vm = AnimalGroupVM(animalGroupName: name, networkService: DependencyContainer.shared.networkService)
+    static func makeAnimalGroupVC(_ animalName: [String]) -> AnimalGroupVC {
+        let vm = AnimalGroupVM(animalGroupName: animalName, networkService: DependencyContainer.shared.networkService)
         return AnimalGroupVC(viewModel: vm)
     }
 }
