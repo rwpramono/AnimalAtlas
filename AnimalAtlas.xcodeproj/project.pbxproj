@@ -24,7 +24,7 @@
 		9A0EA5AF2C522B4D005FB9C3 /* AnimalsAPICollections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA5AE2C522B4D005FB9C3 /* AnimalsAPICollections.swift */; };
 		9A0EA5B12C522DFF005FB9C3 /* AnimalResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA5B02C522DFF005FB9C3 /* AnimalResponse.swift */; };
 		9A0EA5B42C528C46005FB9C3 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA5B32C528C46005FB9C3 /* DependencyContainer.swift */; };
-		9A0EA5B62C528E37005FB9C3 /* PaxelAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA5B52C528E37005FB9C3 /* PaxelAPI.swift */; };
+		9A0EA5B62C528E37005FB9C3 /* PexelAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA5B52C528E37005FB9C3 /* PexelAPI.swift */; };
 		9A0EA5B82C528FAE005FB9C3 /* SearchPhotoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA5B72C528FAE005FB9C3 /* SearchPhotoResponse.swift */; };
 		9A0EA5BA2C5290F1005FB9C3 /* AnimalListFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA5B92C5290F1005FB9C3 /* AnimalListFactory.swift */; };
 		9A0EA5BC2C5290FF005FB9C3 /* AnimalListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA5BB2C5290FF005FB9C3 /* AnimalListVM.swift */; };
@@ -87,7 +87,7 @@
 		9A0EA5AE2C522B4D005FB9C3 /* AnimalsAPICollections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsAPICollections.swift; sourceTree = "<group>"; };
 		9A0EA5B02C522DFF005FB9C3 /* AnimalResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalResponse.swift; sourceTree = "<group>"; };
 		9A0EA5B32C528C46005FB9C3 /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
-		9A0EA5B52C528E37005FB9C3 /* PaxelAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaxelAPI.swift; sourceTree = "<group>"; };
+		9A0EA5B52C528E37005FB9C3 /* PexelAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PexelAPI.swift; sourceTree = "<group>"; };
 		9A0EA5B72C528FAE005FB9C3 /* SearchPhotoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPhotoResponse.swift; sourceTree = "<group>"; };
 		9A0EA5B92C5290F1005FB9C3 /* AnimalListFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalListFactory.swift; sourceTree = "<group>"; };
 		9A0EA5BB2C5290FF005FB9C3 /* AnimalListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalListVM.swift; sourceTree = "<group>"; };
@@ -272,7 +272,7 @@
 			children = (
 				9A0EA5AE2C522B4D005FB9C3 /* AnimalsAPICollections.swift */,
 				9A0EA5AC2C522A3A005FB9C3 /* NinjaAPI.swift */,
-				9A0EA5B52C528E37005FB9C3 /* PaxelAPI.swift */,
+				9A0EA5B52C528E37005FB9C3 /* PexelAPI.swift */,
 			);
 			path = APICollections;
 			sourceTree = "<group>";
@@ -503,7 +503,7 @@
 				9A0EA5E12C554C5F005FB9C3 /* FavoriteAnimalVM.swift in Sources */,
 				9A0EA5A92C5227ED005FB9C3 /* URLSessionService.swift in Sources */,
 				9A0EA5CC2C54F68A005FB9C3 /* CoreDataService.swift in Sources */,
-				9A0EA5B62C528E37005FB9C3 /* PaxelAPI.swift in Sources */,
+				9A0EA5B62C528E37005FB9C3 /* PexelAPI.swift in Sources */,
 				9A0EA5662C5221D9005FB9C3 /* AppDelegate.swift in Sources */,
 				9A0EA59D2C522537005FB9C3 /* HttpNetwork.swift in Sources */,
 				9A0EA5BF2C52912F005FB9C3 /* AnimalListContentView.swift in Sources */,
