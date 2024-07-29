@@ -49,6 +49,9 @@
 		9A0EA6CC2C56130B005FB9C3 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA6CB2C56130B005FB9C3 /* CoreDataStack.swift */; };
 		9A0EA6CE2C561391005FB9C3 /* FavoriteAnimalPersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA6CD2C561391005FB9C3 /* FavoriteAnimalPersistenceService.swift */; };
 		9A0EA6D02C562809005FB9C3 /* StaggeredCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA6CF2C562808005FB9C3 /* StaggeredCollectionViewCell.swift */; };
+		9A0EA6D32C5718AF005FB9C3 /* ImageLoaderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA6D22C5718AF005FB9C3 /* ImageLoaderService.swift */; };
+		9A0EA6D52C571972005FB9C3 /* DataCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA6D42C571972005FB9C3 /* DataCodable.swift */; };
+		9A0EA6D72C571E55005FB9C3 /* ImageAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0EA6D62C571E55005FB9C3 /* ImageAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +118,9 @@
 		9A0EA6CB2C56130B005FB9C3 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		9A0EA6CD2C561391005FB9C3 /* FavoriteAnimalPersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteAnimalPersistenceService.swift; sourceTree = "<group>"; };
 		9A0EA6CF2C562808005FB9C3 /* StaggeredCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaggeredCollectionViewCell.swift; sourceTree = "<group>"; };
+		9A0EA6D22C5718AF005FB9C3 /* ImageLoaderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderService.swift; sourceTree = "<group>"; };
+		9A0EA6D42C571972005FB9C3 /* DataCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCodable.swift; sourceTree = "<group>"; };
+		9A0EA6D62C571E55005FB9C3 /* ImageAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +225,7 @@
 			children = (
 				9A0EA6BB2C55D60F005FB9C3 /* AnimalGroup.swift */,
 				9A0EA5B02C522DFF005FB9C3 /* AnimalResponse.swift */,
+				9A0EA6D42C571972005FB9C3 /* DataCodable.swift */,
 				9A0EA5D52C552C83005FB9C3 /* FavoriteAnimalPhoto.swift */,
 				9A0EA5B72C528FAE005FB9C3 /* SearchPhotoResponse.swift */,
 			);
@@ -248,8 +255,9 @@
 			isa = PBXGroup;
 			children = (
 				9A0EA5AA2C5228C0005FB9C3 /* APICollections */,
-				9A0EA5A72C5227E3005FB9C3 /* URLSessionService */,
 				9A0EA5A42C522791005FB9C3 /* Config */,
+				9A0EA6D12C57189B005FB9C3 /* ImageLoaderService */,
+				9A0EA5A72C5227E3005FB9C3 /* URLSessionService */,
 			);
 			path = NetworkService;
 			sourceTree = "<group>";
@@ -277,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				9A0EA5AE2C522B4D005FB9C3 /* AnimalsAPICollections.swift */,
+				9A0EA6D62C571E55005FB9C3 /* ImageAPI.swift */,
 				9A0EA5AC2C522A3A005FB9C3 /* NinjaAPI.swift */,
 				9A0EA5B52C528E37005FB9C3 /* PexelAPI.swift */,
 			);
@@ -314,9 +323,9 @@
 		9A0EA5C52C54F39F005FB9C3 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				9A0EA5C22C533433005FB9C3 /* AnimalPhotoViewCell.swift */,
 				9A0EA6B72C55611B005FB9C3 /* AnimalGroupContentView.swift */,
 				9A0EA6BD2C55DB2D005FB9C3 /* AnimalPhotoTableViewCell.swift */,
+				9A0EA5C22C533433005FB9C3 /* AnimalPhotoViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -368,6 +377,14 @@
 				9A0EA6CB2C56130B005FB9C3 /* CoreDataStack.swift */,
 			);
 			path = CoreDataStack;
+			sourceTree = "<group>";
+		};
+		9A0EA6D12C57189B005FB9C3 /* ImageLoaderService */ = {
+			isa = PBXGroup;
+			children = (
+				9A0EA6D22C5718AF005FB9C3 /* ImageLoaderService.swift */,
+			);
+			path = ImageLoaderService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -508,6 +525,7 @@
 				9A0EA5BA2C5290F1005FB9C3 /* AnimalListFactory.swift in Sources */,
 				9A0EA5C92C54F63F005FB9C3 /* DataPersistence.swift in Sources */,
 				9A0EA5AD2C522A3A005FB9C3 /* NinjaAPI.swift in Sources */,
+				9A0EA6D72C571E55005FB9C3 /* ImageAPI.swift in Sources */,
 				9A0EA6B42C5560BA005FB9C3 /* AnimalGroupVC.swift in Sources */,
 				9A0EA5A62C5227A6005FB9C3 /* HttpNetworkError.swift in Sources */,
 				9A0EA5DF2C554C58005FB9C3 /* FavoriteAnimalVC.swift in Sources */,
@@ -530,7 +548,9 @@
 				9A0EA5E32C554CCE005FB9C3 /* FavoriteAnimalContentView.swift in Sources */,
 				9A0EA6CC2C56130B005FB9C3 /* CoreDataStack.swift in Sources */,
 				9A0EA5B42C528C46005FB9C3 /* DependencyContainer.swift in Sources */,
+				9A0EA6D32C5718AF005FB9C3 /* ImageLoaderService.swift in Sources */,
 				9A0EA5682C5221D9005FB9C3 /* SceneDelegate.swift in Sources */,
+				9A0EA6D52C571972005FB9C3 /* DataCodable.swift in Sources */,
 				9A0EA6B82C55611B005FB9C3 /* AnimalGroupContentView.swift in Sources */,
 				9A0EA5CE2C54F6CE005FB9C3 /* DataPersistenceError.swift in Sources */,
 				9A0EA5DB2C554C32005FB9C3 /* FavoriteAnimalFactory.swift in Sources */,

@@ -32,14 +32,9 @@ final class AnimalGroupVC: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.title = viewModel.getAnimalGroupTitle()
 
-        configureDataSource()
         configureDataBinding()
         
         viewModel.getAllAnimalPhoto()
-    }
-    
-    private func configureDataSource() {
-
     }
     
     private func configureDataBinding() {
@@ -54,7 +49,11 @@ final class AnimalGroupVC: UIViewController {
             .compactMap { $0 }
             .receive(on: DispatchQueue.main)
             .sink { [weak self] animalPhoto in
-                self?.contentView.configure(animalPhoto)
+                guard let self, animalPhoto.count < 1, let lastItem = animalPhoto.last else {
+                    self?.contentView.configure(animalPhoto)
+                    return
+                }
+                self.contentView.addNewRow(with: lastItem)
             }
             .store(in: &cancellables)
         

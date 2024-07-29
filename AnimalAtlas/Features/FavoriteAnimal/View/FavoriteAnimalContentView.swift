@@ -25,7 +25,6 @@ final class FavoriteAnimalContentView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         collectionView.delegate = self
-        collectionView.dataSource = self
         collectionView.register(ImageWithLabelViewCell.self, forCellWithReuseIdentifier: "ImageWithLabelViewCell")
         
         addSubview(collectionView)
@@ -47,21 +46,8 @@ final class FavoriteAnimalContentView: UIView {
     }
 }
 
-extension FavoriteAnimalContentView: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return images.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageWithLabelViewCell", for: indexPath) as! ImageWithLabelViewCell
-        let image = images[indexPath.item].photoStringURL
-        let title = images[indexPath.item].name
-        cell.configure(with: UIImage(named: "Animal-Slide-4")!, title: title)
-        return cell
-    }
-
+extension FavoriteAnimalContentView: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 180, height: 180)
     }
-
 }

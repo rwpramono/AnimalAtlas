@@ -65,6 +65,17 @@ final class AnimalGroupContentView: UIView {
         animalPhoto = photo
         tableView.reloadData()
     }
+
+    public func addNewRow(with photo: AnimalGroupPhoto) {
+//        guard var animalPhoto, !animalPhoto.isEmpty else { return }
+        animalPhoto?.append(photo)
+        
+        guard let photoCount = animalPhoto?.count else { return }
+        let newIndexPath = IndexPath(row: 1, section: photoCount - 1)
+        tableView.beginUpdates()
+        tableView.insertRows(at: [newIndexPath], with: .automatic)
+        tableView.endUpdates()
+    }
     
     public func stopIndicator() {
         activityIndicator.stopAnimating()
@@ -107,7 +118,4 @@ extension AnimalGroupContentView: UITableViewDataSource, UITableViewDelegate {
         view.addSubview(label)
         return view
     }
-
-//        onTapLoveIcon?(animalPhoto?[indexPath.row].id)
-//    }
 }

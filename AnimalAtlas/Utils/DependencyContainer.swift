@@ -15,5 +15,6 @@ final class DependencyContainer {
     private let urlSession = URLSession(configuration: .ephemeral)
 
     lazy var networkService: HttpNetwork = URLSessionService(session: urlSession, decoder: jsonDecoder)
+    lazy var imageLoaderService: HttpNetwork = ImageLoaderService(session: urlSession)
     lazy var coreDataStack: CoreDataStack = CoreDataStack(.persistent)
 }

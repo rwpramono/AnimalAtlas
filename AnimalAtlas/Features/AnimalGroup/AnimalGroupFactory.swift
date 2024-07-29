@@ -11,7 +11,8 @@ final class AnimalGroupFactory {
     static func makeAnimalGroupVC(_ animalName: AnimalGroup) -> AnimalGroupVC {
         let vm = AnimalGroupVM(
             animalNames: animalName,
-            networkService: DependencyContainer.shared.networkService,
+            networkService: DependencyContainer.shared.networkService, 
+            imageLoaderService: DependencyContainer.shared.imageLoaderService,
             dataPersistence: FavoriteAnimalPersistenceService(
                 coreDataStack: DependencyContainer.shared.coreDataStack
             )

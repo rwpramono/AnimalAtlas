@@ -39,7 +39,7 @@ final class FavoriteAnimalVC: UIViewController {
     }
     
     private func configureDataSource() {
-        
+        contentView.collectionView.dataSource = self
     }
     
     private func configureDataBinding() {
@@ -67,5 +67,22 @@ final class FavoriteAnimalVC: UIViewController {
             image: UIImage(systemName: "line.3.horizontal.decrease.circle.fill"),
             menu: menu)
         self.navigationItem.rightBarButtonItem = rightBarButton
+    }
+}
+
+extension FavoriteAnimalVC: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return viewModel.favoriteData?.count ?? 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageWithLabelViewCell", for: indexPath) as! ImageWithLabelViewCell
+        guard let image = viewModel.favoriteData?[indexPath.item].photoStringURL,
+              let title = viewModel.favoriteData?[indexPath.item].name else {
+            return UICollectionViewCell()
+        }
+        cell.configure(with: title)
+        cell.loadImage(with: image, apiClient: viewModel.networkService)
+        return cell
     }
 }

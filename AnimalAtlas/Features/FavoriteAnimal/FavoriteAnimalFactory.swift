@@ -10,6 +10,7 @@ import Foundation
 final class FavoriteAnimalFactory {
     static func makeFavoriteAnimalVC() -> FavoriteAnimalVC {
         let vm = FavoriteAnimalVM(
+            networkService: DependencyContainer.shared.imageLoaderService,
             dataPersistence: FavoriteAnimalPersistenceService(
                 coreDataStack: DependencyContainer.shared.coreDataStack
             )

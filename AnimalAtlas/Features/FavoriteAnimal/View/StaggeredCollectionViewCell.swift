@@ -5,10 +5,12 @@
 //  Created by Rachmat Wahyu Pramono on 28/07/24.
 //
 
+import Combine
 import UIKit
 
 class ImageWithLabelViewCell: UICollectionViewCell {
-    
+    private var cancellables = Set<AnyCancellable>()
+
     let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
@@ -48,8 +50,18 @@ class ImageWithLabelViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configure(with image: UIImage, title: String) {
-        imageView.image = UIImage(named: "Animal-Slide-7")
+    func configure(with title: String) {
         titleLabel.text = title
+    }
+    
+    func loadImage(with imageUrlString: String, apiClient: HttpNetwork) {
+        apiClient.execute(ImageAPI(.get, path: imageUrlString))
+            .receive(on: DispatchQueue.main)
+            .sink(receiveCompletion: { completion in
+                
+            }, receiveValue: { [weak self] (data: DataCodable) in
+                self?.imageView.image = UIImage(data: data.data)
+            })
+            .store(in: &cancellables)
     }
 }

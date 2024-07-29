@@ -10,10 +10,14 @@ import Foundation
 final class FavoriteAnimalVM<T: DataPersistence>: ObservableObject where T.T == FavoriteAnimalPhoto {
     private let dataPersistence: T
     
+    let networkService: HttpNetwork
+
     @Published var errorMessage: String = ""
     @Published var favoriteData: [FavoriteAnimalPhoto]?
     
-    init(dataPersistence: T) {
+    init( networkService: HttpNetwork,
+          dataPersistence: T) {
+        self.networkService = networkService
         self.dataPersistence = dataPersistence
     }
 

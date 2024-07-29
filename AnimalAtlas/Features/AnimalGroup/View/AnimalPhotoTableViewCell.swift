@@ -14,7 +14,7 @@ class AnimalPhotoTableViewCell: UITableViewCell {
     
     var loveTapPublishers = PassthroughSubject<FavoriteAnimalPhoto, Never>()
 
-    private let collectionView: UICollectionView = {
+    let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
@@ -69,11 +69,14 @@ extension AnimalPhotoTableViewCell: UICollectionViewDelegate, UICollectionViewDa
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AnimalPhotoViewCell.identifier, for: indexPath) as? AnimalPhotoViewCell else {
             return UICollectionViewCell()
         }
-        cell.configure(with: photos?.animalPhotos[indexPath.item], animalName: photos?.animalName)
+        cell.configure(
+            with: photos?.animalPhotos[indexPath.item],
+            animalName: photos?.animalName,
+            apiClient: DependencyContainer.shared.imageLoaderService
+        )
         cell.loveTapPublishers = loveTapPublishers
         return cell
     }
-    
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 180, height: 180)

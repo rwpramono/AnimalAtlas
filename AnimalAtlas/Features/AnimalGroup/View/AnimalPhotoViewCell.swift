@@ -10,6 +10,8 @@ import Foundation
 import UIKit
 
 class AnimalPhotoViewCell: UICollectionViewCell {
+    private var cancellables = Set<AnyCancellable>()
+
     static let identifier = "AnimalPhotoViewCell"
     
     var loveTapPublishers = PassthroughSubject<FavoriteAnimalPhoto, Never>()
@@ -60,16 +62,24 @@ class AnimalPhotoViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configure(with item: AnimalPhoto?, animalName: String?) {
+    func configure(with item: AnimalPhoto?, animalName: String?, apiClient: HttpNetwork) {
         guard let item, let animalName else { return }
-        animalPhoto.image = UIImage(named: "Animal-Slide-1")
         self.animalData = FavoriteAnimalPhoto(
             id: "\(item.id)",
             name: animalName,
             photoStringURL: item.src.medium
         )
+        
+        apiClient.execute(ImageAPI(.get, path: item.src.medium))
+            .receive(on: DispatchQueue.main)
+            .sink(receiveCompletion: { completion in
+                
+            }, receiveValue: { [weak self] (data: DataCodable) in
+                self?.animalPhoto.image = UIImage(data: data.data)
+            })
+            .store(in: &cancellables)
     }
-    
+
     @objc private func likeLabelTapped() {
         guard let animalData else { return }
         loveTapPublishers.send(animalData)
