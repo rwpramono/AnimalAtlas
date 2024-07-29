@@ -36,6 +36,4 @@ Unit tests are included in the project to ensure the reliability and stability o
 - Business logic mostly covered
 - All unit test run for 17 seconds
 
-<img width="798" alt="image" src="https://github.com/rwpramono/SocialFeed/assets/7835665/7c383317-6fbc-4c10-b9e8-3a8ffaaba2e7">
-
-<img width="1043" alt="image" src="https://github.com/rwpramono/SocialFeed/assets/7835665/91aba431-8588-45da-bc0e-fc3eaceb6eb1">
+TBA
