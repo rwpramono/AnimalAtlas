@@ -59,6 +59,8 @@
 		9A2F5ACF2C573B730046F3AF /* NinjaAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2F5ACE2C573B730046F3AF /* NinjaAPITests.swift */; };
 		9A2F5AD22C5740720046F3AF /* PexelAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2F5AD12C5740720046F3AF /* PexelAPITests.swift */; };
 		9A2F5AD42C5740FC0046F3AF /* ImageAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2F5AD32C5740FC0046F3AF /* ImageAPITests.swift */; };
+		9A2F5AD72C5742540046F3AF /* AnimalsAPICollectionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2F5AD62C5742540046F3AF /* AnimalsAPICollectionsTests.swift */; };
+		9A2F5AD92C57439F0046F3AF /* FeatureFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2F5AD82C57439F0046F3AF /* FeatureFactoryTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,6 +137,8 @@
 		9A2F5ACE2C573B730046F3AF /* NinjaAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NinjaAPITests.swift; sourceTree = "<group>"; };
 		9A2F5AD12C5740720046F3AF /* PexelAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PexelAPITests.swift; sourceTree = "<group>"; };
 		9A2F5AD32C5740FC0046F3AF /* ImageAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAPITests.swift; sourceTree = "<group>"; };
+		9A2F5AD62C5742540046F3AF /* AnimalsAPICollectionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalsAPICollectionsTests.swift; sourceTree = "<group>"; };
+		9A2F5AD82C57439F0046F3AF /* FeatureFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureFactoryTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -417,6 +421,7 @@
 			isa = PBXGroup;
 			children = (
 				9A2F5AC92C573B150046F3AF /* DataPersistenceError.swift */,
+				9A2F5AD82C57439F0046F3AF /* FeatureFactoryTests.swift */,
 				9A2F5AC72C573AEE0046F3AF /* HttpNetworkErrorTests.swift */,
 			);
 			path = Misc;
@@ -433,11 +438,20 @@
 		9A2F5AD02C573BC80046F3AF /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				9A2F5ACE2C573B730046F3AF /* NinjaAPITests.swift */,
-				9A2F5AD12C5740720046F3AF /* PexelAPITests.swift */,
-				9A2F5AD32C5740FC0046F3AF /* ImageAPITests.swift */,
+				9A2F5AD52C5742430046F3AF /* APICollections */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		9A2F5AD52C5742430046F3AF /* APICollections */ = {
+			isa = PBXGroup;
+			children = (
+				9A2F5AD62C5742540046F3AF /* AnimalsAPICollectionsTests.swift */,
+				9A2F5AD32C5740FC0046F3AF /* ImageAPITests.swift */,
+				9A2F5ACE2C573B730046F3AF /* NinjaAPITests.swift */,
+				9A2F5AD12C5740720046F3AF /* PexelAPITests.swift */,
+			);
+			path = APICollections;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -617,6 +631,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A2F5AD72C5742540046F3AF /* AnimalsAPICollectionsTests.swift in Sources */,
 				9A0EA57D2C5221DA005FB9C3 /* AnimalAtlasTests.swift in Sources */,
 				9A2F5AD22C5740720046F3AF /* PexelAPITests.swift in Sources */,
 				9A2F5ACF2C573B730046F3AF /* NinjaAPITests.swift in Sources */,
@@ -625,6 +640,7 @@
 				9A2F5AC82C573AEE0046F3AF /* HttpNetworkErrorTests.swift in Sources */,
 				9A2F5AD42C5740FC0046F3AF /* ImageAPITests.swift in Sources */,
 				9A2F5ACD2C573B4C0046F3AF /* NetworkServiceSpy.swift in Sources */,
+				9A2F5AD92C57439F0046F3AF /* FeatureFactoryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

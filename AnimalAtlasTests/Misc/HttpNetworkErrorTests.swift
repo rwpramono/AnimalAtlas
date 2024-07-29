@@ -20,7 +20,6 @@ final class HttpNetworkErrorTests: XCTestCase {
         let sut = HttpNetworkError.badRequest
         XCTAssertEqual(sut.localizedDescription, "Bad request")
     }
-
     
     func test_should_return_network_error_noResponseData() throws {
         let sut = HttpNetworkError.noResponseData
