@@ -12,9 +12,9 @@ import UIKit
 final class FavoriteAnimalVC: UIViewController {
     private var viewModel: FavoriteAnimalVM<FavoriteAnimalPersistenceService>
     private lazy var contentView = FavoriteAnimalContentView()
-
+    
     fileprivate var cancellables = Set<AnyCancellable>()
-
+    
     init(viewModel: FavoriteAnimalVM<FavoriteAnimalPersistenceService>) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
@@ -27,11 +27,11 @@ final class FavoriteAnimalVC: UIViewController {
     override func loadView() {
         self.view = contentView
     }
-
+    
     override func viewDidLoad() {
-        navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.title = "Favorite Animal"
-
+        navigationController?.navigationBar.prefersLargeTitles = true
+        setupFilterNavItem()
         configureDataSource()
         configureDataBinding()
         
@@ -39,7 +39,7 @@ final class FavoriteAnimalVC: UIViewController {
     }
     
     private func configureDataSource() {
-
+        
     }
     
     private func configureDataBinding() {
@@ -50,19 +50,22 @@ final class FavoriteAnimalVC: UIViewController {
                 self?.contentView.configure(images: data)
             }
             .store(in: &cancellables)
-//
-//        viewModel.$errorMessage
-//            .dropFirst()
-//            .first(where: { !$0.isEmpty })
-//            .receive(on: DispatchQueue.main)
-//            .sink { [weak self] errorMessage in
-//                self?.title = "API Gateway Error: \(errorMessage)"
-//            }
-//            .store(in: &cancellables)
-
     }
     
-    @objc private func favoriteButtonTapped() {
+    private func setupFilterNavItem() {
+        let handler: (_ action: UIAction) -> () = { [weak self] action in
+            self?.viewModel.filterData(by: action.identifier.rawValue)
+        }
         
+        let actions = AnimalListFactory.initialAnimalListData.map {
+            UIAction(title: $0, identifier: .init($0), handler: handler)
+        }
+        
+        let menu = UIMenu(title: "Filter by Animal Group",  children: actions)
+        let rightBarButton = UIBarButtonItem(
+            title: "",
+            image: UIImage(systemName: "line.3.horizontal.decrease.circle.fill"),
+            menu: menu)
+        self.navigationItem.rightBarButtonItem = rightBarButton
     }
 }

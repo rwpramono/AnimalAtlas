@@ -9,7 +9,7 @@ import Combine
 import Foundation
 
 final class AnimalListVM: ObservableObject {
-    let initialAnimalListData = ["Elephant", "Lion", "Fox", "Dog", "Shark", "Turtle", "Whale", "Penguin"]
+    let initialAnimalListData = AnimalListFactory.initialAnimalListData
     
     private let networkService: HttpNetwork
     private var cancellables = Set<AnyCancellable>()

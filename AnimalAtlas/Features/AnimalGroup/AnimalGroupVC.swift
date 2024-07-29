@@ -46,7 +46,7 @@ final class AnimalGroupVC: UIViewController {
         contentView.loveTapPublishers
             .receive(on: DispatchQueue.main)
             .sink { [weak self] in
-            self?.viewModel.saveFavoritePhoto($0)
+            self?.viewModel.toggleFavoritePhoto($0)
         }
         .store(in: &cancellables)
         

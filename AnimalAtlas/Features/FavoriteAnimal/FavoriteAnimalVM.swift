@@ -24,4 +24,10 @@ final class FavoriteAnimalVM<T: DataPersistence>: ObservableObject where T.T == 
             errorMessage = DataPersistenceError.loadFailed(error).localizedDescription
         }
     }
+    
+    func filterData(by animalName: String) {
+        favoriteData = try? dataPersistence.load().filter {
+            $0.name.contains(animalName)
+        }
+    }
 }
